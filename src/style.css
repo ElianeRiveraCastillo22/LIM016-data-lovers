@@ -1,10 +1,16 @@
 *{
+   
     width: 0;
     height: 0;
     box-sizing: border-box;
 }
 .contenido{
     display: flex;
+    
+}
+body{
+    background-image: url(./img/fondo\ ghibli.jpg) ;
+    
 }
 
 .logo-header{
@@ -42,16 +48,17 @@
     margin-top:77px;
     width: 1508px;
     height: 556px;
-    background-color: cadetblue;
+   /*  background-color: cadetblue; */
     display: inline-block;
 }
 .cabeza{
-    width: 1508px;
+    
+    width: 1519px;
     height: 75px;
     background-color: #18191F ;
 }
 .pieDePagina{
-    width:1508px;
+    width:1519px;
     height: 75px ;
     background-color:#18191F;
     margin-top: 635px ;
