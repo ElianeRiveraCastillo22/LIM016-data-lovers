@@ -1,0 +1,56 @@
+*{
+    width: 0;
+    height: 0;
+    box-sizing: border-box;
+}
+.contenido{
+    display: flex;
+}
+
+.logo-header{
+    margin-top: 4px;
+    margin-left: 598px;
+    height:68px;
+    width: 300px;
+ 
+}
+.flexMain{
+    display: inline-block;
+}
+.btnOpciones{
+    height: 40px;
+    border-radius: 20px;
+    border-color: #F39F9F;
+    width:180px ;
+    padding: 5px;
+    margin-top:30px ;
+    background-color: #F39F9F;
+    margin-left: 12px;
+}
+.botones{/*contiene*/
+    margin-left:55px;
+    margin-top:85px ;
+    width: 224px;
+    height: 400px;
+    background-color:white;
+    padding: 10px;
+    border-radius: 20px;
+}
+.flexMain{
+    margin-top:77px;
+    width: 1520px;
+    height: 556px;
+    background-color:cadetblue;
+    display: inline-block;
+}
+.cabeza{
+    width: 1520px;
+    height: 75px;
+    background-color: #18191F ;
+}
+.pieDePagina{
+    width:1520px;
+    height: 75px ;
+    background-color:#18191F;
+    margin-top: 635px ;
+}
