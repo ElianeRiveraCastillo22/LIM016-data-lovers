@@ -26,6 +26,7 @@
     margin-top:30px ;
     background-color: #F39F9F;
     margin-left: 12px;
+    transition: 1s ease all;/*utilizar despues*/
 }
 .botones{/*contiene*/
     margin-left:55px;
@@ -36,20 +37,21 @@
     padding: 10px;
     border-radius: 20px;
 }
+
 .flexMain{
     margin-top:77px;
-    width: 1520px;
+    width: 1508px;
     height: 556px;
-    background-color:cadetblue;
+    background-color: cadetblue;
     display: inline-block;
 }
 .cabeza{
-    width: 1520px;
+    width: 1508px;
     height: 75px;
     background-color: #18191F ;
 }
 .pieDePagina{
-    width:1520px;
+    width:1508px;
     height: 75px ;
     background-color:#18191F;
     margin-top: 635px ;
