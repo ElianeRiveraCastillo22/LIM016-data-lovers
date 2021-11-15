@@ -63,3 +63,10 @@ body{
     background-color:#18191F;
     margin-top: 635px ;
 }
+
+.apareceInf{
+    margin-left: 100px;
+    width: 20px;
+    margin-top: 100px;
+    height: 40px;
+}
