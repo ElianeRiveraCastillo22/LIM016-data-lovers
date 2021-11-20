@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/7301e79ad4.js" crossorigin="anonymous"></script>
   </head>
 
   <div class="contenido">
@@ -11,25 +12,53 @@
     
       <header >
         <div class="cabeza">
-        
-            <img  class="logo-header" src="./img/img para el header.png" alt="logo de Ghibli">
-       
+            <div class="icon_menu">
+              <i class="fas fa-align-justify"></i>
+             <!--  <i class="fal fa-align-justify"></i> -->
+             </div>
+            <div>
+              <img  class="logo-header" src="./img/img para el header.png" alt="logo de Ghibli">
+            </div>
         </div>
       </header>
 
       <main>
             <div class="flexMain">
               <div class="botones">
-                <input class="btnOpciones" type="button" value="Nombre de pelicula">
-                <input class="btnOpciones" type="button" value="filmografia">
-                <input class="btnOpciones" type="button" value="duracion de pelicula">
-                <input class="btnOpciones" type="button" value="director">
-                <input class="btnOpciones" type="button" value="mas sobre los personajes">
-              </div>
-              <div class="apareceInf">
 
-               </div>
+                <input type="search" placeholder="titulos" class="btnOpciones" id="btn-title" type="button" value="Nombre de pelicula">
+                <section id="shows-query" class="grid-fluid"></section>
+                <template>
+                  <article>
+                    <h3></h3>
+                    <div></div>
+                  </article>
+                </template>
+                <input class="btnOpciones" id="btn-filmografia" type="button" value="filmografia">
+                <input class="btnOpciones" id="btn-duracion" type="button" value="duracion de pelicula">
+                <input class="btnOpciones" id="btn-director" type="button" value="director">
+                <input class="btnOpciones" id="btn-personajes" type="button" value="mas sobre los personajes">
+              </div>
+              <div id="apareceInf" class="apareceInf">
+               <!--  <article class="template-card">
+                  <figure class="clase">
+                    <img src="" alt="">
+                    <figcaption></figcaption>
+                    <p class="item-description"></p>
+                  </figure>
+                </article> -->
+              <!-- cuando haga el buscador por pelicula -->
+              <template id="shows">
+                <article class="show">
+                  <h3></h3>
+                  <div></div>
+                  <img src="" alt="">
+                  <a href=""></a>
+                </article>
+              </template>
+              </div>
             </div>
+            
       </main>
 
       <footer>
@@ -43,6 +72,9 @@
       <div id="root"></div><!--done va la inf-->
       <script src="main.js" type="module"></script>
   </body>
-
   </div>
+
 </html>
+
+
+

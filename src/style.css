@@ -1,11 +1,16 @@
-*{
-   
-    width: 0;
-    height: 0;
+*{ 
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+
+}
+html{
+    font-size: 62.5%;
 }
 .contenido{
-    display: flex;
+    height: 100vh;
+    width: 100vw;
+    display: block
     
 }
 body{
@@ -14,8 +19,8 @@ body{
 }
 
 .logo-header{
-    margin-top: 4px;
-    margin-left: 598px;
+   /*  margin-top: 4px;
+    margin-left: 598px; */
     height:68px;
     width: 300px;
  
@@ -31,13 +36,13 @@ body{
     padding: 5px;
     margin-top:30px ;
     background-color: #F39F9F;
-    margin-left: 12px;
+    margin-left:2px;
     transition: 1s ease all;/*utilizar despues*/
 }
 .botones{/*contiene*/
     margin-left:55px;
-    margin-top:85px ;
-    width: 224px;
+    margin-top:110px ;
+    width: 300px;
     height: 400px;
     background-color:white;
     padding: 10px;
@@ -45,21 +50,67 @@ body{
 }
 
 .flexMain{
-    margin-top:77px;
-    width: 1508px;
-    height: 556px;
+   
+  /*   width: 1508px;
+    height: 556px; */
    /*  background-color: cadetblue; */
-    display: inline-block;
+    display: flex;
 }
 .cabeza{
-    
-    width: 1519px;
+   /*  width: 100%; */
     height: 75px;
     background-color: #18191F ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .pieDePagina{
-    width:1519px;
+    width:100%;
     height: 75px ;
     background-color:#18191F;
-    margin-top: 635px ;
+    margin-top: 65px ;
 }
+.apareceInf{
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-right: 20px;
+   /*  width: 1180px; */
+  /*   height: 570px ; */
+    border:8px solid white ;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.grid-fluid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px.1fr));
+}
+.loader{
+    display: block;
+    margin:auto;
+}
+/* .icon-menu{
+    width: 4rem;
+    height: 4rem;
+    float: left;
+    position: relative;
+    border: 0.9rem solid transparent;
+    cursor: pointer;
+}
+.icon-menu span{
+    width: 100%;
+    height: 0.2rem;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    transition: rotate(0deg);
+    opacity: 1;
+} */
+
+
+/*.poster{
+    width: 200px;
+    height: 276px;
+}
+
+ 200 276 */
