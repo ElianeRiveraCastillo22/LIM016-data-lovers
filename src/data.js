@@ -10,16 +10,18 @@ export const anotherExample = () => {
 
 // se crea las funciones para que el usuario pueda iteractuar (independientemente del DOM)
 
- export const infoDirector = (data, category) => {
-  const director = data.filter(menuItems => {
-    if (menuItems.director === category) {
-      return menuItems;
-    }
-  });  
-    if (category == 'all') {
-      return infoData(data);
-    } else {
-      return infoData(director);
-    }
-  
+
+
+export const ordenarEstreno = (arrayData) => {
+   let estreno = [];
+
+  arrayData.forEach(pelicula => {
+      estreno.push(pelicula.release_date);
+     
+  })
+  //Array.from(new Set(estreno));
+  const uniqueSetEstreno = new Set(estreno);
+  const uniqueEstreno = [...uniqueSetEstreno];
+  uniqueEstreno.sort(function(a,b){return b-a});
+  return uniqueEstreno;
 };

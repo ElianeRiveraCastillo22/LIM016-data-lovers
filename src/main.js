@@ -1,4 +1,4 @@
-import {infoDirector} from './data.js';
+import {ordenarEstreno} from './data.js';
 //console.log(example)
 import data from './data/ghibli/ghibli.js';/*libera nuestra data*/
 //console.log(data.films[0].people[0])
@@ -230,7 +230,7 @@ function mostrarDuracionPelicula(menuItems){
 
 // Estreno
 
-let estreno = [];
+/*let estreno = [];
 
 infoData.forEach(pelicula => {
     estreno.push(pelicula.release_date);
@@ -239,13 +239,15 @@ infoData.forEach(pelicula => {
 //Array.from(new Set(estreno));
 const uniqueSetEstreno = new Set(estreno);
 const uniqueEstreno = [...uniqueSetEstreno];
-uniqueEstreno.sort(function(a,b){return b-a});
-uniqueEstreno.forEach(estreno => {
+uniqueEstreno.sort(function(a,b){return b-a});*/
+ordenarEstreno(infoData).forEach(estreno => {
     let opcion =  document.createElement('option');
     opcion.value = estreno;
     opcion.innerText = estreno;
     btnEstreno.appendChild(opcion); 
 })
+
+
 
 // Despliegue de estrenos
 
@@ -281,7 +283,8 @@ function mostrarEstreno(menuItems){
 let personajes = [];
 
 infoData.forEach(pelicula => {
-    personajes.push(pelicula.people.name);
+    personajes.push(pelicula.people);
+    
    
 })
 //Array.from(new Set(personajes));
