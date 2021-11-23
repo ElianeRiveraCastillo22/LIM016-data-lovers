@@ -81,6 +81,7 @@ body{
     background-color:#18191F;
     margin-top: 65px ;
 }
+<<<<<<< HEAD
 .apareceInf{
     width: 100%;
    /*  margin-left: 50px;
@@ -88,11 +89,31 @@ body{
     margin-right: 20px; */
    /*  width: 1180px; */
     height: 570px ; 
+=======
+/*.apareceInf{
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-right: 20px;*/
+   /*  width: 1180px; */
+  /*   height: 570px ; */
+   /* border:8px solid white ;
+    display: flex;
+    flex-wrap: wrap;
+}*/
+.apareceInf{
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    width: 1016px; 
+    /*height: 1120px ;*/ 
+>>>>>>> 1e96b7bee7a7feb44904c57db0f2732a79dad2e0
     border:8px solid white ;
     display: flex;
     flex-wrap: wrap;
 
 }
+<<<<<<< HEAD
 i.fas.fa-align-justify{
     background-color: white;
 }
@@ -241,6 +262,10 @@ scrollbar-width: none;
 
 
 /* .grid-fluid{
+=======
+
+.grid-fluid{
+>>>>>>> 1e96b7bee7a7feb44904c57db0f2732a79dad2e0
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px.1fr));
 }
@@ -273,3 +298,8 @@ scrollbar-width: none;
 }
 
  200 276 */
+
+ .clase{
+    width: 200px;
+    height: 276px;
+}
