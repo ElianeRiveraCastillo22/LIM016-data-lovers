@@ -56,12 +56,12 @@ function mostrarPelicula(menuItems){
     <img src="${pelicula.poster}" alt="${pelicula.title}">
     </figure>
     <div>
-     <h2>${pelicula.title}</h2>
-     <h2>${pelicula.director}</h2>
-     <h2>${pelicula.producer}</h2>
-     <h2>${pelicula.release_date}</h2>
-     <h2>${pelicula.rt_score}</h2>
-     <h2>${pelicula.description}</h2>
+     <h2>Title: ${pelicula.title}</h2>
+     <h2>Director: ${pelicula.director}</h2>
+     <h2>Producer: ${pelicula.producer}</h2>
+     <h2>Release date: ${pelicula.release_date}</h2>
+     <h2>Rt score: ${pelicula.rt_score}</h2>
+     <h2>Description:${pelicula.description}</h2>
     </article>`;
  }) 
   cards.innerHTML= template;
@@ -120,12 +120,12 @@ function mostrarDirector(menuItems){
     <img src="${pelicula.poster}" alt="${pelicula.title}">
     </figure>
     <div>
-     <h2>${pelicula.title}</h2>
-     <h2>${pelicula.director}</h2>
-     <h2>${pelicula.producer}</h2>
-     <h2>${pelicula.release_date}</h2>
-     <h2>${pelicula.rt_score}</h2>
-     <h2>${pelicula.description}</h2>
+     <h2>Title: ${pelicula.title}</h2>
+     <h2>Director: ${pelicula.director}</h2>
+     <h2>Producer: ${pelicula.producer}</h2>
+     <h2>Release date: ${pelicula.release_date}</h2>
+     <h2>Rt score: ${pelicula.rt_score}</h2>
+     <h2>Description: ${pelicula.description}</h2>
     </article>`;
  }) 
   cards.innerHTML= template;
@@ -168,12 +168,12 @@ function mostrarProductor(menuItems){
     <img src="${pelicula.poster}" alt="${pelicula.title}">
     </figure>
     <div>
-     <h2>${pelicula.title}</h2>
-     <h2>${pelicula.director}</h2>
-     <h2>${pelicula.producer}</h2>
-     <h2>${pelicula.release_date}</h2>
-     <h2>${pelicula.rt_score}</h2>
-     <h2>${pelicula.description}</h2>
+     <h2>Title: ${pelicula.title}</h2>
+     <h2>Director: ${pelicula.director}</h2>
+     <h2>Producer: ${pelicula.producer}</h2>
+     <h2>Release date: ${pelicula.release_date}</h2>
+     <h2>Rt score: ${pelicula.rt_score}</h2>
+     <h2>Description: ${pelicula.description}</h2>
     </article>`;
  }) 
   cards.innerHTML= template;
@@ -216,12 +216,12 @@ function mostrarDuracionPelicula(menuItems){
     <img src="${pelicula.poster}" alt="${pelicula.title}">
     </figure>
     <div>
-     <h2>${pelicula.title}</h2>
-     <h2>${pelicula.director}</h2>
-     <h2>${pelicula.producer}</h2>
-     <h2>${pelicula.release_date}</h2>
-     <h2>${pelicula.rt_score}</h2>
-     <h2>${pelicula.description}</h2>
+     <h2>Title: ${pelicula.title}</h2>
+     <h2>Director: ${pelicula.director}</h2>
+     <h2>Producer: ${pelicula.producer}</h2>
+     <h2>Release date: ${pelicula.release_date}</h2>
+     <h2>Rt score: ${pelicula.rt_score}</h2>
+     <h2>Description: ${pelicula.description}</h2>
     </article>`;
  }) 
   cards.innerHTML= template;
@@ -266,6 +266,84 @@ function mostrarEstreno(menuItems){
     <img src="${pelicula.poster}" alt="${pelicula.title}">
     </figure>
     <div>
+     <h2>Title: ${pelicula.title}</h2>
+     <h2>Director: ${pelicula.director}</h2>
+     <h2>Producer: ${pelicula.producer}</h2>
+     <h2>Release date: ${pelicula.release_date}</h2>
+     <h2>Rt score: ${pelicula.rt_score}</h2>
+     <h2>Description: ${pelicula.description}</h2>
+     </div>
+    </article>`;
+ }) 
+  cards.innerHTML= template;
+
+}
+
+// Personajes
+
+let dataPersonajes = [];
+let personajes = [];
+
+infoData.forEach(pelicula => {
+    dataPersonajes.push(pelicula.people);
+    pelicula.people.forEach(people => {
+        personajes.push(people.name);
+    
+    })
+})
+//Array.from(new Set(personajes));
+const uniqueSetPersonajes = new Set(personajes);
+const uniquePersonajes = [...uniqueSetPersonajes];
+uniquePersonajes.sort();
+uniquePersonajes.forEach(personaje => {
+    let opcion =  document.createElement('option');
+    opcion.value = personaje;
+    opcion.innerText = personaje;
+    btnPersonajes.appendChild(opcion); 
+
+})
+
+// Despliegue de personajes
+
+btnPersonajes.addEventListener('change',function(){
+    mostrarPersonaje(infoData);
+    
+});
+
+function mostrarPersonaje(menuItems){
+    let template="";
+    menuItems.forEach(pelicula=>{
+        pelicula.people.forEach(personaje => {
+            if(personaje.name === btnPersonajes.value) {
+                template += `<article class="template-card">
+                <figure class="clase">
+                <img src="${personaje.img}" alt="${personaje.img}">
+                </figure>
+                <div>
+                <h2>Name: ${personaje.name}</h2>
+                <h2>Gender: ${personaje.gender}</h2>
+                <h2>Age: ${personaje.age}</h2>
+                <h2>Eye color: ${personaje.eye_color}</h2>
+                <h2>Specie: ${personaje.specie}</h2>
+                </div>
+                </article>`;
+            }
+        })
+    
+    }) 
+    cards.innerHTML= template;
+
+}
+/*function mostrarEstreno(menuItems){
+    let template="";
+     menuItems.forEach(pelicula=>{
+    // console.log(pelicula)
+    if(pelicula.release_date === btnEstreno.value)
+    template += `<article class="template-card">
+    <figure class="clase">
+    <img src="${pelicula.poster}" alt="${pelicula.title}">
+    </figure>
+    <div>
      <h2>${pelicula.title}</h2>
      <h2>${pelicula.director}</h2>
      <h2>${pelicula.producer}</h2>
@@ -278,32 +356,7 @@ function mostrarEstreno(menuItems){
 
 }
 
-// Personajes
-
-let personajes = [];
-
-infoData.forEach(pelicula => {
-    personajes.push(pelicula.people);
-    
-   
-})
-//Array.from(new Set(personajes));
-const uniqueSetPersonajes = new Set(personajes);
-const uniquePersonajes = [...uniqueSetPersonajes];
-uniquePersonajes.sort();
-uniquePersonajes.forEach(personaje => {
-    let opcion =  document.createElement('option');
-    opcion.value = personaje;
-    opcion.innerText = personaje;
-    btnPersonajes.appendChild(opcion); 
-})
-
-
-
-
-
-
-
+*/
 
 /*for (let i = 1; i <= 12; i++) {
     let opcion = document.createElement('option');
