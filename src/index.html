@@ -5,25 +5,124 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/7301e79ad4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
   </head>
-
-  <div class="contenido">
+  <div class="contenido" id="contenido">
   <body>
     
       <header >
         <div class="cabeza">
             <div class="icon_menu">
-              <i class="fas fa-align-justify"></i>
-             <!--  <i class="fal fa-align-justify"></i> -->
+              <i class="fas fa-align-justify" class="btn_open"></i>
+              <p class="menu">Menú</p>
              </div>
-            <div>
+            <div class="imagenHeader">
               <img  class="logo-header" src="./img/img para el header.png" alt="logo de Ghibli">
             </div>
         </div>
       </header>
 
+      <div class="menu__lado" id="menu__lado">
+
+          <div class="name__page">
+            <i class="fas fa-home"></i>
+            <h4>Studio Ghibli</h4>
+          </div>
+
+          <div class="filtrado">
+
+            <h2 class="clasificacion">Filtrado por:</h2> 
+           <!--  <hr> -->
+
+            <div class="options-menu">
+
+              <a href="#" class="seleccionado">
+                <div class="option">
+                  <select  class="select" name="Nombre de Pelicula" id="btn-title" data-id="btn-title">
+                    <option value="" disabled selected><h4>Nombre de pelicula</h4></option>
+                  </select>
+                </div>
+              </a>
+
+              <a href="#" class="seleccionado">
+                <div class="option">
+                  <select  class="select" name="Personajes" id="btn-personajes" data-id="btn-personajes">
+                    <option value="" disabled selected ><h4>Personaje</h4></option>
+                  </select>
+                  
+                </div>
+              </a>
+
+              <a href="#">
+                <div class="option">
+                  <select  class="select" name="Director" id="btn-director" data-id="btn-director">
+                    <option value="" disabled selected> <h4>Director</h4></option>
+                  </select>
+                </div>
+              </a>
+
+              <a href="#">
+                 <div class="option">
+                  <select  class="select" name="Nombre de Pelicula" id="data-title">
+                    <option value=""disabled selected> <h4>Productor</h4> </option>
+                  </select>
+                </div>
+              </a>
+
+            </div>
+            
+          </div>
+
+          <div class="orden">
+            
+            <h2 class="clasificacion">Ordenar por:</h2>
+            <!-- <hr> -->
+
+            <div class="options-menu">
+
+                <a href="#">
+                  <div class="option">
+
+                    <h4>A-Z</h4>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="option">
+                    <select  class="select" name="Tiempo de duracion" id="btn-duracion" data-id="btn-duracion">
+                      <option value=""disabled selected><h4>Tiempo de duracion</h4></option>
+                    </select>
+                    
+                  </div>
+
+                </a>
+
+                <a href="#">
+                  <div class="option">
+                    <h4>Score</h4>
+                  </div>
+                </a>
+
+                <a href="#"> 
+                  <div class="option">
+                    <h4>Año ascendiente</h4>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="option">
+                    <h4>Año descendiente</h4>
+                  </div>
+                </a>
+          
+            </div>
+
+          </div>
+
+      </div>
+      
       <main>
-            <div class="flexMain">
+            <!-- <div class="flexMain">
               <div class="botones">
 
                 <input type="search" placeholder="titulos" class="btnOpciones" id="btn-title" type="button" value="Nombre de pelicula">
@@ -38,26 +137,12 @@
                 <input class="btnOpciones" id="btn-duracion" type="button" value="duracion de pelicula">
                 <input class="btnOpciones" id="btn-director" type="button" value="director">
                 <input class="btnOpciones" id="btn-personajes" type="button" value="mas sobre los personajes">
-              </div>
+              </div> --> -->
               <div id="apareceInf" class="apareceInf">
-               <!--  <article class="template-card">
-                  <figure class="clase">
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                    <p class="item-description"></p>
-                  </figure>
-                </article> -->
-              <!-- cuando haga el buscador por pelicula -->
-              <template id="shows">
-                <article class="show">
-                  <h3></h3>
-                  <div></div>
-                  <img src="" alt="">
-                  <a href=""></a>
-                </article>
-              </template>
+               
+              
               </div>
-            </div>
+            <!-- </div> -->
             
       </main>
 
@@ -72,7 +157,7 @@
       <div id="root"></div><!--done va la inf-->
       <script src="main.js" type="module"></script>
   </body>
-  </div>
+</div>
 
 </html>
 
