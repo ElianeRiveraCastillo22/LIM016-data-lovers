@@ -70,17 +70,29 @@ body{
     background-color:#18191F;
     margin-top: 65px ;
 }
+/*.apareceInf{
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-right: 20px;*/
+   /*  width: 1180px; */
+  /*   height: 570px ; */
+   /* border:8px solid white ;
+    display: flex;
+    flex-wrap: wrap;
+}*/
 .apareceInf{
     margin-left: 50px;
     margin-top: 30px;
     margin-right: 20px;
-   /*  width: 1180px; */
-  /*   height: 570px ; */
+    margin-bottom: 30px;
+    width: 1016px; 
+    /*height: 1120px ;*/ 
     border:8px solid white ;
     display: flex;
     flex-wrap: wrap;
 
 }
+
 .grid-fluid{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(200px.1fr));
@@ -114,3 +126,8 @@ body{
 }
 
  200 276 */
+
+ .clase{
+    width: 200px;
+    height: 276px;
+}

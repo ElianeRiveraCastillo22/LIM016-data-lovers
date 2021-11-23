@@ -24,21 +24,43 @@
 
       <main>
             <div class="flexMain">
-              <div class="botones">
 
-                <input type="search" placeholder="titulos" class="btnOpciones" id="btn-title" type="button" value="Nombre de pelicula">
-                <section id="shows-query" class="grid-fluid"></section>
-                <template>
-                  <article>
-                    <h3></h3>
-                    <div></div>
-                  </article>
-                </template>
-                <input class="btnOpciones" id="btn-filmografia" type="button" value="filmografia">
-                <input class="btnOpciones" id="btn-duracion" type="button" value="duracion de pelicula">
-                <input class="btnOpciones" id="btn-director" type="button" value="director">
-                <input class="btnOpciones" id="btn-personajes" type="button" value="mas sobre los personajes">
+              <div class="botones">
+                <div class= "flexbox">
+                  <select name="Nombre de pelicula" data-id="btn-title" id="btn-title">
+                    <option disabled selected >Nombre de pelicula</option>
+                  </select><br>
+                  <select name="Director" data-id="btn-director" id="btn-director">
+                    <option disabled selected >Director</option>
+                  </select><br>
+                  <select name="Productor" data-id="btn-productor" id="btn-productor">
+                    <option disabled selected >Productor</option>
+                  </select><br>
+                  <select name="Duracion de pelicula" data-id="btn-duracion" id="btn-duracion">
+                    <option disabled selected >Duracion de pelicula</option>
+                  </select><br>
+                  <select name="Estreno" data-id="btn-estreno" id="btn-estreno">
+                    <option disabled selected >Estreno</option>
+                  </select><br>
+                  <select name="Personajes" data-id="btn-personajes" id="btn-personajes">
+                    <option disabled selected >Personajes</option>
+                  </select>
+                  
+                  <!--<input type="search" placeholder="titulos" class="btnOpciones" data-id="btn-title" type="button" value="Nombre de pelicula">
+                  <section id="shows-query" class="grid-fluid"></section>
+                    <template>
+                      <article>
+                      <h3></h3>
+                      <div></div>
+                      </article>
+                    </template>
+                   <input class="btnOpciones" data-id="btn-filmografia" type="button" value="filmografia">
+                   <input class="btnOpciones" data-id="btn-duracion" type="button" value="duracion de pelicula">
+                   <input class="btnOpciones" data-id="btn-director" type="button" value="director">
+                   <input class="btnOpciones" data-id="btn-personajes" type="button" value="mas sobre los personajes">-->
+                </div>
               </div>
+
               <div id="apareceInf" class="apareceInf">
                <!--  <article class="template-card">
                   <figure class="clase">
