@@ -11,72 +11,48 @@
   <body>
     
       <header >
+        
         <div class="cabeza">
+         
             <div class="icon_menu">
+              
               <i class="fas fa-align-justify"></i>
              <!--  <i class="fal fa-align-justify"></i> -->
-             </div>
+            </div>
+            
             <div>
               <img  class="logo-header" src="./img/img para el header.png" alt="logo de Ghibli">
             </div>
+            
         </div>
       </header>
 
       <main>
+        <input type="text" name="buscador" id="buscador">
+        <button id="boton">Buscar</button>
             <div class="flexMain">
 
               <div class="botones">
                 <div class= "flexbox">
-                  <select name="Nombre de pelicula" data-id="btn-title" id="btn-title">
+                  <label for="select-score">Score *****(entre 89-100):</label> 
+                  <input type="range"  id="input-score" name="score" min="89" max="100" list="lista-rango">
+                  <select name="Nombre de pelicula" data-id="select-title" id="select-title">
                     <option disabled selected >Nombre de pelicula</option>
                   </select><br>
-                  <select name="Director" data-id="btn-director" id="btn-director">
+                  <select name="Director" data-id="select-director" id="select-director">
                     <option disabled selected >Director</option>
                   </select><br>
-                  <select name="Productor" data-id="btn-productor" id="btn-productor">
+                  <select name="Productor" data-id="select-producer" id="select-producer">
                     <option disabled selected >Productor</option>
-                  </select><br>
-                  <select name="Duracion de pelicula" data-id="btn-duracion" id="btn-duracion">
-                    <option disabled selected >Duracion de pelicula</option>
-                  </select><br>
-                  <select name="Estreno" data-id="btn-estreno" id="btn-estreno">
+                  </select><br> 
+                  <select name="Estreno" data-id="select-premiere" id="select-premiere">
                     <option disabled selected >Estreno</option>
                   </select><br>
-                  <select name="Personajes" data-id="btn-personajes" id="btn-personajes">
-                    <option disabled selected >Personajes</option>
-                  </select>
-                  
-                  <!--<input type="search" placeholder="titulos" class="btnOpciones" data-id="btn-title" type="button" value="Nombre de pelicula">
-                  <section id="shows-query" class="grid-fluid"></section>
-                    <template>
-                      <article>
-                      <h3></h3>
-                      </article>
-                    </template>
-                   <input class="btnOpciones" data-id="btn-filmografia" type="button" value="filmografia">
-                   <input class="btnOpciones" data-id="btn-duracion" type="button" value="duracion de pelicula">
-                   <input class="btnOpciones" data-id="btn-director" type="button" value="director">
-                   <input class="btnOpciones" data-id="btn-personajes" type="button" value="mas sobre los personajes">-->
+    
                 </div>
               </div>
 
               <div id="apareceInf" class="apareceInf">
-               <!--  <article class="template-card">
-                  <figure class="clase">
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                    <p class="item-description"></p>
-                  </figure>
-                </article> -->
-              <!-- cuando haga el buscador por pelicula -->
-              <template id="shows">
-                <article class="show">
-                  <h3></h3>
-                  <div></div>
-                  <img src="" alt="">
-                  <a href=""></a>
-                </article>
-              </template>
               </div>
             </div>
             
