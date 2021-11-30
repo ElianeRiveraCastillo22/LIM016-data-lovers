@@ -4,186 +4,93 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/7301e79ad4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/7301e79ad4.js" crossorigin="anonymous"></script>
   </head>
-  <div class="contenido" id="contenido">
+
   <body>
-    
+  <div class="meinContent">
       <header >
         <div class="cabeza">
-            <div class="icon_menu">
-              <i class="fas fa-align-justify" class="btn_open"></i>
-              <p class="menu">Menú</p>
-             </div>
-            <div class="imagenHeader">
+
+            <div class="icon__menu">
+              <input type="checkbox" class="checkbox" id="menu-toogle"/>
+              <label for="menu-toogle" class="menu-toogle"></label>
+            </div>
+
+            <div class="logo">
               <img  class="logo-header" src="./img/img para el header.png" alt="logo de Ghibli">
             </div>
+
         </div>
       </header>
 
-      <div class="menu__lado" id="menu__lado">
+  <div class="container-menu">
+    <div class="cont-menu">
+      <nav id="menu__side" class="menu__side" >
 
-          <div class="name__page">
-            <i class="fas fa-home"></i>
-            <h4>Studio Ghibli</h4>
-          </div>
-
-          <div class="filtrado">
-
-            <h2 class="clasificacion">Filtrado por:</h2> 
-           <!--  <hr> -->
-
-            <div class="options-menu">
-
-              <a href="#" class="seleccionado">
-                <div class="option">
-                  <select  class="select" name="Nombre de Pelicula" id="btn-title" data-id="btn-title">
-                    <option value="" disabled selected><h4>Nombre de pelicula</h4></option>
-                  </select>
-                </div>
-              </a>
-
-              <a href="#" class="seleccionado">
-                <div class="option">
-                  <select  class="select" name="Personajes" id="btn-personajes" data-id="btn-personajes">
-                    <option value="" disabled selected ><h4>Personaje</h4></option>
-                  </select>
-                  
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="option">
-                  <select  class="select" name="Director" id="btn-director" data-id="btn-director">
-                    <option value="" disabled selected> <h4>Director</h4></option>
-                  </select>
-                </div>
-              </a>
-
-              <a href="#">
-                 <div class="option">
-                  <select  class="select" name="Nombre de Pelicula" id="data-title">
-                    <option value=""disabled selected> <h4>Productor</h4> </option>
-                  </select>
-                </div>
-              </a>
-
+        <div class="name__page">
+          <h2>Menú</h2>
+          <h1>Studio Ghibli</h1>
+        </div>
+        <hr>
+        <div class="options__menu">
+  
+          <a href="#">
+            <div>
+              <select class="option" name="Nombre de pelicula" data-id="btn-title" id="btn-title">
+                <option disabled selected ><h4>pelicula</h4></option>
+              </select>
             </div>
-            
-          </div>
-
-          <div class="orden">
-            
-            <h2 class="clasificacion">Ordenar por:</h2>
-            <!-- <hr> -->
-
-            <div class="options-menu">
-
-                <a href="#">
-                  <div class="option">
-
-                    <h4>A-Z</h4>
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="option">
-                    <select  class="select" name="Tiempo de duracion" id="btn-duracion" data-id="btn-duracion">
-                      <option value=""disabled selected><h4>Tiempo de duracion</h4></option>
-                    </select>
-                    
-                  </div>
-
-                </a>
-
-                <a href="#">
-                  <div class="option">
-                    <h4>Score</h4>
-                  </div>
-                </a>
-
-                <a href="#"> 
-                  <div class="option">
-                    <h4>Año ascendiente</h4>
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="option">
-                    <h4>Año descendiente</h4>
-                  </div>
-                </a>
+          </a>
+  
+          <a href="#">
+            <div>
+              <select class="option" name="Director" data-id="btn-director" id="btn-director">
+                <option disabled selected ><h4>Director</h4></option>
+              </select>
+            </div>
+          </a>
+  
+          <a href="#">
+            <div>
+              <select class="option" name="Productor" data-id="btn-productor" id="btn-productor">
+                <option disabled selected ><h4>Productor</h4></option>
+              </select>
+            </div>
+          </a>
+  
+          <a href="#">
+            <div>
+              <select class="option" name="Duracion de pelicula" data-id="btn-duracion" id="btn-duracion">
+                <option disabled selected ><h4>Score</h4></option>
+              </select>
+            </div>
+          </a>
+  
+          <a href="#">
+            <div>
+              <select class="option" name="Estreno" data-id="btn-estreno" id="btn-estreno">
+                <option disabled selected ><h4>Año de Estreno</h4></option>
+              </select>
+            </div>
+          </a>
           
-            </div>
-
-          </div>
-
-      </div>
-      
+        </div>
+  
+      </nav>
+    
+      <i class="fas fa-times"></i>
+   
+    </div>
+  </div>
+    <div class="capa"></div>
       <main>
-<<<<<<< HEAD
-            <!-- <div class="flexMain">
-              <div class="botones">
 
-                <input type="search" placeholder="titulos" class="btnOpciones" id="btn-title" type="button" value="Nombre de pelicula">
-                <section id="shows-query" class="grid-fluid"></section>
-                <template>
-                  <article>
-                    <h3></h3>
-                    <div></div>
-                  </article>
-                </template>
-                <input class="btnOpciones" id="btn-filmografia" type="button" value="filmografia">
-                <input class="btnOpciones" id="btn-duracion" type="button" value="duracion de pelicula">
-                <input class="btnOpciones" id="btn-director" type="button" value="director">
-                <input class="btnOpciones" id="btn-personajes" type="button" value="mas sobre los personajes">
-              </div> --> -->
-=======
-            <div class="flexMain">
-
-              <div class="botones">
-                <div class= "flexbox">
-                  <select name="Nombre de pelicula" data-id="btn-title" id="btn-title">
-                    <option disabled selected >Nombre de pelicula</option>
-                  </select><br>
-                  <select name="Director" data-id="btn-director" id="btn-director">
-                    <option disabled selected >Director</option>
-                  </select><br>
-                  <select name="Productor" data-id="btn-productor" id="btn-productor">
-                    <option disabled selected >Productor</option>
-                  </select><br>
-                  <select name="Duracion de pelicula" data-id="btn-duracion" id="btn-duracion">
-                    <option disabled selected >Duracion de pelicula</option>
-                  </select><br>
-                  <select name="Estreno" data-id="btn-estreno" id="btn-estreno">
-                    <option disabled selected >Estreno</option>
-                  </select><br>
-                  <select name="Personajes" data-id="btn-personajes" id="btn-personajes">
-                    <option disabled selected >Personajes</option>
-                  </select>
-                  
-                  <!--<input type="search" placeholder="titulos" class="btnOpciones" data-id="btn-title" type="button" value="Nombre de pelicula">
-                  <section id="shows-query" class="grid-fluid"></section>
-                    <template>
-                      <article>
-                      <h3></h3>
-                      </article>
-                    </template>
-                   <input class="btnOpciones" data-id="btn-filmografia" type="button" value="filmografia">
-                   <input class="btnOpciones" data-id="btn-duracion" type="button" value="duracion de pelicula">
-                   <input class="btnOpciones" data-id="btn-director" type="button" value="director">
-                   <input class="btnOpciones" data-id="btn-personajes" type="button" value="mas sobre los personajes">-->
-                </div>
-              </div>
-
->>>>>>> 1e96b7bee7a7feb44904c57db0f2732a79dad2e0
-              <div id="apareceInf" class="apareceInf">
+         <div id="apareceInf" class="apareceInf">
                
-              
-              </div>
-            <!-- </div> -->
-            
+        </div>
+             
       </main>
 
       <footer>
@@ -193,13 +100,16 @@
         </div>
 
       </footer>
+  </div>  
+
+
+
 
       <div id="root"></div><!--done va la inf-->
+
       <script src="main.js" type="module"></script>
+    
   </body>
-</div>
+  </div>
 
 </html>
-
-
-

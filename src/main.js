@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-import{infoDirector} from './data.js';
-=======
+/* eslint-disable no-undef */
 import {ordenarEstreno} from './data.js';
->>>>>>> 1e96b7bee7a7feb44904c57db0f2732a79dad2e0
 //console.log(example)
 import data from './data/ghibli/ghibli.js';/*libera nuestra data*/
 //console.log(data.films[0].people[0])
@@ -10,22 +7,13 @@ import data from './data/ghibli/ghibli.js';/*libera nuestra data*/
 /*  para todo lo que tenga que ver con mostrar los datos en la pantalla(con la interaccion del DOM) */ 
 const btnTitle = document.querySelector("#btn-title");
 const btnFilmografia = document.querySelector("#btn-filmografia");
-const btnDuracion = document.querySelector("#btn-duracion");
-<<<<<<< HEAD
-
-const btnPersonajes = document.querySelector("#btn-personajes");
-const btnContainer= document.querySelector(".botones")
-const btnDirector = document.querySelector("#btn-director");
-const btnProductor= document.querySelector("#btn-productor");
-const btnEstreno= document.querySelector("btn-estreno")
-=======
+const btnScore = document.querySelector("#btn-duracion");
 //const btnDirector = document.querySelector("#btn-director");
 const btnPersonajes = document.querySelector("#btn-personajes");
 const btnContainer = document.querySelector(".botones");
 const btnDirector = document.querySelector("#btn-director");
 const btnProductor = document.querySelector("#btn-productor");
 const btnEstreno = document.querySelector("#btn-estreno");
->>>>>>> 1e96b7bee7a7feb44904c57db0f2732a79dad2e0
 
 //const {films} = data;
 //console.log(films);
@@ -34,11 +22,7 @@ const infoData = data.films; //console.log(infoData)
 const cards=document.querySelector(".apareceInf");
 
 window.addEventListener('DOMContentLoaded',function(){
-<<<<<<< HEAD
-displayMenuItems(infoData)
-=======
 displayMenuItems(infoData);
->>>>>>> 1e96b7bee7a7feb44904c57db0f2732a79dad2e0
 //displayFilmsButtons();
 //movieOptions(infoData)
 });
@@ -51,95 +35,20 @@ function displayMenuItems(menuItems){
    <figure class="clase">
    <img src="${pelicula.poster}" alt="${pelicula.title}">
    </figure></article>`;
-<<<<<<< HEAD
-}) ;
-cards.innerHTML= template;
-//console.log(template)
-} 
-
- //despliegue de pelicula{}
-
-btnTitle.addEventListener('change',function(){
-    mostrarPelicula(infoData);
-
-=======
 }) 
  cards.innerHTML= template;
-//console.log(template)
+
 } 
 
-// Despliegue de pelicula
 
-btnTitle.addEventListener('change',function(){
-    mostrarPelicula(infoData);
-    
->>>>>>> 1e96b7bee7a7feb44904c57db0f2732a79dad2e0
-});
 
-function mostrarPelicula(menuItems){
-    let template="";
-<<<<<<< HEAD
-    menuItems.forEach(pelicula=>{
-        //console.log(pelicula)
-        if(pelicula.title===btnTitle.value)
-        template = `<article class="template-card">
-        <figure class="clase">
-        <img src="${pelicula.poster}" alt="${pelicula.title}"
-        </figure>
-        <div>
-        <h2>${pelicula.title}</h2>
-        <h2>${pelicula.director}</h2>
-        <h2>${pelicula.producer}</h2>
-        <h2>${pelicula.release_date}</h2>
-        <h2>${pelicula.rt_score}</h2>
-        <h2>${pelicula.description}</h2>
-        </div>`;
-    })
-    cards.innerHTML=template
-    //console.log(template)
-}
-    //seleccionar pelicula
-let titulos =[];
+// prueba Seleccionar pelicula colocar imagenes; vehiculos y locaciones
 
-infoData.forEach(pelicula=>{
-    titulos.push(pelicula.title);
-    /* let option=ducument.createElement('option');
-    option.value=pelicula.title;
-    option.innerText=pelicula.title;
-    btnTitle.appendChild(option); 
-})
-title.sort
-
-    
-=======
-     menuItems.forEach(pelicula=>{
-    // console.log(pelicula)
-    if(pelicula.title === btnTitle.value)
-    template = `<article class="template-card">
-    <figure class="clase">
-    <img src="${pelicula.poster}" alt="${pelicula.title}">
-    </figure>
-    <div>
-     <h2>${pelicula.title}</h2>
-     <h2>${pelicula.director}</h2>
-     <h2>${pelicula.producer}</h2>
-     <h2>${pelicula.release_date}</h2>
-     <h2>${pelicula.rt_score}</h2>
-     <h2>${pelicula.description}</h2>
-    </article>`;
- }) 
-  cards.innerHTML= template;
- //console.log(template)
- } 
-//Seleccionar pelicula
 let titulos = [];
 
 infoData.forEach(pelicula => {
     titulos.push(pelicula.title);
-    /*let opcion =  document.createElement('option');
-    opcion.value = pelicula.title;
-    opcion.innerText = pelicula.title;
-    btnTitle.appendChild(opcion);*/
+        
 })
 titulos.sort();
 titulos.forEach(titulo => {
@@ -148,6 +57,107 @@ titulos.forEach(titulo => {
     opcion.innerText = titulo;
     btnTitle.appendChild(opcion); 
 })
+// Despliegue de pelicula
+
+btnTitle.addEventListener('change',function(){
+    mostrarPelicula(infoData);
+    
+});
+
+function mostrarPelicula(menuItems){
+    let template="";
+     menuItems.forEach(pelicula=>{
+    // console.log(pelicula)
+        if(pelicula.title === btnTitle.value) {
+            let templatePersonajes = "";
+            pelicula.people.forEach(personaje => {
+                templatePersonajes += `<figure class="clase">
+                <img src="${personaje.img}" alt="${personaje.img}">
+                </figure>
+                <div>
+                <h2>Name: ${personaje.name}</h2>
+                <h2>Gender: ${personaje.gender}</h2>
+                <h2>Age: ${personaje.age}</h2>
+                <h2>Eye color: ${personaje.eye_color}</h2>
+                <h2>Specie: ${personaje.specie}</h2>
+                </div>`   
+            })
+
+            let templateLocations = "";
+            //if("locations" in pelicula) {
+                pelicula.locations.forEach(locacion => {
+                    //console.log(locacion)
+                    templateLocations += `<figure class="clase">
+                    <img src="${locacion.img}" alt="${locacion.img}">
+                    </figure>
+                    <div>
+                    <h2>Name: ${locacion.name}</h2>
+                    <h2>Gender: ${locacion.climate}</h2>
+                    <h2>Age: ${locacion.terrain}</h2>
+                    <h2>Eye color: ${locacion.surface_water}</h2>
+                    `
+                    if("residents" in locacion) {
+                        locacion.residents.forEach(residente => {
+                           //console.log(typeof(residente))
+                           if(typeof(residente) === "object") {
+                            if("name" in residente) {
+                                templateLocations += `<h2>Residente: ${residente.name}</h2>`
+                            }
+                           }else{
+                                templateLocations += `<h2>Residente: ${residente}</h2>`
+                            }
+                            
+                        })
+                    }
+
+                    templateLocations += `</div>`
+
+                });
+            //} 
+
+
+
+            let templateVehiculos = "";
+            //if("vehicles" in pelicula) {
+                pelicula.vehicles.forEach(vehiculo => {
+                    templateVehiculos += `<figure class="clase">
+                    <img src="${vehiculo.img}" alt="${vehiculo.img}">
+                    </figure>
+                    <div>
+                    <h2>Name: ${vehiculo.name}</h2>
+                    <h2>Gender: ${vehiculo.description}</h2>
+                    <h2>Age: ${vehiculo.vehicle_class}</h2>
+                    <h2>Eye color: ${vehiculo.length}</h2>
+                    <h2>Specie: ${vehiculo.pilot.name}</h2>
+                    </div>`   
+                })
+            //}
+            template = `<article class="template-card">
+            <figure class="clase">
+            <img src="${pelicula.poster}" alt="${pelicula.title}">
+            </figure>
+            <div>
+            <h2>Title: ${pelicula.title}</h2>
+            <h2>Director: ${pelicula.director}</h2>
+            <h2>Producer: ${pelicula.producer}</h2>
+            <h2>Release date: ${pelicula.release_date}</h2>
+            <h2>Rt score: ${pelicula.rt_score}</h2>
+            <h2>Description:${pelicula.description}</h2>
+            ${templatePersonajes}
+            ${templateLocations}
+            ${templateVehiculos}
+            </article>`;
+                
+        }    
+            
+    })  
+    
+    cards.innerHTML= template;
+    //console.log(template)
+} 
+
+
+
 
 let directores = [];
 
@@ -184,12 +194,12 @@ function mostrarDirector(menuItems){
     <img src="${pelicula.poster}" alt="${pelicula.title}">
     </figure>
     <div>
-     <h2>${pelicula.title}</h2>
-     <h2>${pelicula.director}</h2>
-     <h2>${pelicula.producer}</h2>
-     <h2>${pelicula.release_date}</h2>
-     <h2>${pelicula.rt_score}</h2>
-     <h2>${pelicula.description}</h2>
+     <h2>Title: ${pelicula.title}</h2>
+     <h2>Director: ${pelicula.director}</h2>
+     <h2>Producer: ${pelicula.producer}</h2>
+     <h2>Release date: ${pelicula.release_date}</h2>
+     <h2>Rt score: ${pelicula.rt_score}</h2>
+     <h2>Description: ${pelicula.description}</h2>
     </article>`;
  }) 
   cards.innerHTML= template;
@@ -232,12 +242,12 @@ function mostrarProductor(menuItems){
     <img src="${pelicula.poster}" alt="${pelicula.title}">
     </figure>
     <div>
-     <h2>${pelicula.title}</h2>
-     <h2>${pelicula.director}</h2>
-     <h2>${pelicula.producer}</h2>
-     <h2>${pelicula.release_date}</h2>
-     <h2>${pelicula.rt_score}</h2>
-     <h2>${pelicula.description}</h2>
+     <h2>Title: ${pelicula.title}</h2>
+     <h2>Director: ${pelicula.director}</h2>
+     <h2>Producer: ${pelicula.producer}</h2>
+     <h2>Release date: ${pelicula.release_date}</h2>
+     <h2>Rt score: ${pelicula.rt_score}</h2>
+     <h2>Description: ${pelicula.description}</h2>
     </article>`;
  }) 
   cards.innerHTML= template;
@@ -246,46 +256,46 @@ function mostrarProductor(menuItems){
 
 // Duracion de pelicula
 
-let duracionDePelicula = [];
+let scoreDePelicula = [];
 
 infoData.forEach(pelicula => {
-    duracionDePelicula.push(pelicula.rt_score);
+    scoreDePelicula.push(pelicula.rt_score);
    
 })
 //Array.from(new Set(productores));
-const uniqueSetDuracion = new Set(duracionDePelicula);
-const uniqueDuracion = [...uniqueSetDuracion];
-uniqueDuracion.sort(function(a,b){return a-b});
-uniqueDuracion.forEach(duracion => {
+const uniqueSetScore = new Set(scoreDePelicula);
+const uniqueScore = [...uniqueSetScore];
+uniqueScore.sort(function(a,b){return a-b});
+uniqueScore.forEach(score => {
     let opcion =  document.createElement('option');
-    opcion.value = duracion;
-    opcion.innerText = duracion;
-    btnDuracion.appendChild(opcion); 
+    opcion.value = score;
+    /* opcion.innerText = score; */
+    btnScore.appendChild(opcion); 
 })
 
-// Despliegue de duracion de peliculas
+// Despliegue de score de peliculas
 
-btnDuracion.addEventListener('change',function(){
-    mostrarDuracionPelicula(infoData);
+btnScore.addEventListener('change',function(){
+    mostrarScorePelicula(infoData);
     
     });
 
-function mostrarDuracionPelicula(menuItems){
+function mostrarScorePelicula(menuItems){
     let template="";
      menuItems.forEach(pelicula=>{
     // console.log(pelicula)
-    if(pelicula.rt_score === btnDuracion.value)
+    if(pelicula.rt_score === btnScore.value)
     template += `<article class="template-card">
     <figure class="clase">
     <img src="${pelicula.poster}" alt="${pelicula.title}">
     </figure>
     <div>
-     <h2>${pelicula.title}</h2>
-     <h2>${pelicula.director}</h2>
-     <h2>${pelicula.producer}</h2>
-     <h2>${pelicula.release_date}</h2>
-     <h2>${pelicula.rt_score}</h2>
-     <h2>${pelicula.description}</h2>
+     <h2>Title: ${pelicula.title}</h2>
+     <h2>Director: ${pelicula.director}</h2>
+     <h2>Producer: ${pelicula.producer}</h2>
+     <h2>Release date: ${pelicula.release_date}</h2>
+     <h2>Rt score: ${pelicula.rt_score}</h2>
+     <h2>Description: ${pelicula.description}</h2>
     </article>`;
  }) 
   cards.innerHTML= template;
@@ -318,9 +328,88 @@ ordenarEstreno(infoData).forEach(estreno => {
 btnEstreno.addEventListener('change',function(){
     mostrarEstreno(infoData);
     
-    });
+});
 
 function mostrarEstreno(menuItems){
+    let template="";
+     menuItems.forEach(pelicula=>{
+    // console.log(pelicula)
+    if(pelicula.release_date === btnEstreno.value)
+    template += `<article class="template-card">
+    <figure class="clase">
+    <img src="${pelicula.poster}" alt="${pelicula.title}">
+    </figure>
+    <div>
+     <h2>Title: ${pelicula.title}</h2>
+     <h2>Director: ${pelicula.director}</h2>
+     <h2>Producer: ${pelicula.producer}</h2>
+     <h2>Release date: ${pelicula.release_date}</h2>
+     <h2>Rt score: ${pelicula.rt_score}</h2>
+     <h2>Description: ${pelicula.description}</h2>
+     </div>
+    </article>`;
+    }) 
+  cards.innerHTML= template;
+
+}
+
+// Personajes
+
+/*let dataPersonajes = [];
+let personajes = [];
+
+infoData.forEach(pelicula => {
+    dataPersonajes.push(pelicula.people);
+    pelicula.people.forEach(people => {
+        personajes.push(people.name);
+    
+    })
+})
+//Array.from(new Set(personajes));
+const uniqueSetPersonajes = new Set(personajes);
+const uniquePersonajes = [...uniqueSetPersonajes];
+uniquePersonajes.sort();
+uniquePersonajes.forEach(personaje => {
+    let opcion =  document.createElement('option');
+    opcion.value = personaje;
+    opcion.innerText = personaje;
+    btnPersonajes.appendChild(opcion); 
+
+})
+*/
+// Despliegue de personajes
+
+/*btnPersonajes.addEventListener('change',function(){
+    mostrarPersonaje(infoData);
+    
+});
+
+function mostrarPersonaje(menuItems){
+    let template="";
+    menuItems.forEach(pelicula=>{
+        pelicula.people.forEach(personaje => {
+            if(personaje.name === btnPersonajes.value) {
+                template += `<article class="template-card">
+                <figure class="clase">
+                <img src="${personaje.img}" alt="${personaje.img}">
+                </figure>
+                <div>
+                <h2>Name: ${personaje.name}</h2>
+                <h2>Gender: ${personaje.gender}</h2>
+                <h2>Age: ${personaje.age}</h2>
+                <h2>Eye color: ${personaje.eye_color}</h2>
+                <h2>Specie: ${personaje.specie}</h2>
+                </div>
+                </article>`;
+            }
+        })
+    
+    }) 
+    cards.innerHTML= template;
+
+}
+*/
+/*function mostrarEstreno(menuItems){
     let template="";
      menuItems.forEach(pelicula=>{
     // console.log(pelicula)
@@ -342,32 +431,7 @@ function mostrarEstreno(menuItems){
 
 }
 
-// Personajes
-
-let personajes = [];
-
-infoData.forEach(pelicula => {
-    personajes.push(pelicula.people);
-    
-   
-})
-//Array.from(new Set(personajes));
-const uniqueSetPersonajes = new Set(personajes);
-const uniquePersonajes = [...uniqueSetPersonajes];
-uniquePersonajes.sort();
-uniquePersonajes.forEach(personaje => {
-    let opcion =  document.createElement('option');
-    opcion.value = personaje;
-    opcion.innerText = personaje;
-    btnPersonajes.appendChild(opcion); 
-})
-
-
-
-
-
-
-
+*/
 
 /*for (let i = 1; i <= 12; i++) {
     let opcion = document.createElement('option');
@@ -500,7 +564,6 @@ btnDirector.forEach((btn) => {
 
 
 
->>>>>>> 1e96b7bee7a7feb44904c57db0f2732a79dad2e0
 
 
 
@@ -509,10 +572,6 @@ btnDirector.forEach((btn) => {
 
 
 
-<<<<<<< HEAD
- 
-=======
->>>>>>> 1e96b7bee7a7feb44904c57db0f2732a79dad2e0
 
 
  /* function movieOptions(movieObj){ 
@@ -550,49 +609,21 @@ console.log(nombreDeArticulos)
 
 */
 
+/*para ocultar el menu side*/
+const checkbox=document.getElementById("menu-toogle")
+checkbox.addEventListener('click',myCheckbox())
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function myCheckbox(){
+    let containerMenu=document.querySelector(".container-menu");
+    
+    console.log(containerMenu.display)
+    if(containerMenu.display ==="none"){
+        containerMenu.display="block";
+    } else {
+        containerMenu.display="none";
+    }
+    
+}
 
 
 
