@@ -5,111 +5,106 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel = "preconnect" href = "https://fonts.googleapis.com">
+    
     <script src="https://kit.fontawesome.com/7301e79ad4.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-  <div class="meinContent">
-      <header >
-        <div class="cabeza">
-
-            <div class="icon__menu">
-              <input type="checkbox" class="checkbox" id="menu-toogle"/>
-              <label for="menu-toogle" class="menu-toogle"></label>
-            </div>
-
-            <div class="logo">
-              <img  class="logo-header" src="./img/img para el header.png" alt="logo de Ghibli">
-            </div>
-
+    <header class="header" > 
+      <div class="head"><!--container-->
+        <div class="btn-menu">
+          <label class="icon-menu" for="btn-menu">☰</label>
         </div>
-      </header>
-
-  <div class="container-menu">
-    <div class="cont-menu">
-      <nav id="menu__side" class="menu__side" >
-
-        <div class="name__page">
-          <h2>Menú</h2>
-          <h1>Studio Ghibli</h1>
+        <div class="logo-head">
+          <img  class="logo-header" src= "./img/encabezadoGhibli.png">
         </div>
-        <hr>
-        <div class="options__menu">
-  
-          <a href="#">
-            <div>
-              <select class="option" name="Nombre de pelicula" data-id="btn-title" id="btn-title">
-                <option disabled selected ><h4>pelicula</h4></option>
-              </select>
+      </div>
+     <div class="capa"></div>
+    </header>
+    <!--menu side-->
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+      <div class="cont-menu">
+        <nav>
+          <a href="#" class="closeOption">
+            <div class="diplayBuscador">
+              <div class="EncierraInputBuscador">
+                <input type="text" name="buscador" class="inputBuscador" id="buscador">
+              </div>
+              <div class="encierraButtonBuscador">
+                <button class="buttonBuscador" id="boton">Buscar</button>
+              </div>
             </div>
           </a>
-  
-          <a href="#">
-            <div>
-              <select class="option" name="Director" data-id="btn-director" id="btn-director">
-                <option disabled selected ><h4>Director</h4></option>
-              </select>
-            </div>
+          <a href="#" class="closeOption">
+            <select  class="option" name="Nombre de pelicula" data-id="select-title" id="select-title">
+              <option disabled selected >Nombre de pelicula</option>
+            </select>
           </a>
-  
-          <a href="#">
-            <div>
-              <select class="option" name="Productor" data-id="btn-productor" id="btn-productor">
-                <option disabled selected ><h4>Productor</h4></option>
-              </select>
-            </div>
+          <a href="#" class="closeOption">
+            <select class="option" name="Productor" data-id="select-producer" id="select-producer">
+              <option disabled selected >Productor</option>
+            </select>
           </a>
-  
-          <a href="#">
-            <div>
-              <select class="option" name="Duracion de pelicula" data-id="btn-duracion" id="btn-duracion">
-                <option disabled selected ><h4>Score</h4></option>
-              </select>
-            </div>
+          <a href="#" class="closeOption">
+            <select class="option" name="Director" data-id="select-director" id="select-director">
+              <option disabled selected >Director</option>
+            </select>
           </a>
-  
-          <a href="#">
-            <div>
-              <select class="option" name="Estreno" data-id="btn-estreno" id="btn-estreno">
-                <option disabled selected ><h4>Año de Estreno</h4></option>
-              </select>
-            </div>
+          <a href="#" class="closeOption">
+            <select  class="option" name="Estreno" data-id="select-premiere" id="select-premiere">
+              <option disabled selected >Estreno</option>
+            </select>
           </a>
-          
-        </div>
-  
-      </nav>
-    
-      <i class="fas fa-times"></i>
-   
+          <a href="#" class="closeOption">
+            <div class="score">Score</div>
+            <label for="select-score"></label> 
+            <input class="inputRangeScore" type="range"  id="input-score" name="score" min="89" max="100" list="lista-rango"> 
+          </a>
+        </nav>
+        <label for="btn-menu">✖️</label>
+      </div>
     </div>
-  </div>
-    <div class="capa"></div>
-      <main>
-
-         <div id="apareceInf" class="apareceInf">
-               
+    <main>
+      
+      <div id="apareceInf" class="apareceInf">
+        
+        <div class="container__general" >
         </div>
-             
-      </main>
-
-      <footer>
-
-        <div class="pieDePagina">
-          
+        
+        <div class="cardSerchByMovieName"><!-- para las cartas generales del busqueda por pelicula -->
+        </div>
+        
+        <div class="select__bodyCard">
         </div>
 
-      </footer>
-  </div>  
+        <div class="select__bodyLocations">
+        </div>
 
+      </div> 
 
-
+    </main>
 
       <div id="root"></div><!--done va la inf-->
+      
+    <footer class="footer">
+      <div class="pieDePagina">
+      </div>
+    </footer> 
+
 
       <script src="main.js" type="module"></script>
     
   </body>
-  </div>
+ 
 
 </html>

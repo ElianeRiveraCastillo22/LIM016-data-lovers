@@ -23,7 +23,7 @@ export default {
         },
         {
           "id": "598f7048-74ff-41e0-92ef-87dc1ad980a9",
-          "name": "Lusheeta Toel Ul Laputa",
+          "name": "Lusheeta Toel ",
           "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c3/Sheeta.jpg",
           "gender": "Female",
           "age": "13",
@@ -43,7 +43,7 @@ export default {
         },
         {
           "id": "abe886e7-30c8-4c19-aaa5-d666e60d14de",
-          "name": "Romska Palo Ul Laputa",
+          "name": "Romska Palo",
           "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d5/Muska.jpg",
           "gender": "Male",
           "age": "33",
@@ -1497,7 +1497,8 @@ export default {
         {
           "id": "1287b275-6c32-4113-947f-519316d4a6be",
           "name": "Witch of the Waste",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/e1/Howls-moving-castle-disneyscreencaps.com-10507.jpg",
+         /*  "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/e1/Howls-moving-castle-disneyscreencaps.com-10507.jpg", */
+          "img": "https://static.wikia.nocookie.net/studio-ghhttps://static.wikia.nocookie.net/villains/images/9/9d/424248_3164633998754_1352491418_3259108_263889306_n.jpg/revision/latest/top-crop/width/360/height/360?cb=20120204052236bli/images/3/3f/The_Witch.jpg/revision/latest?cb=20170829232306",
           "gender": "Female",
           "age": "59",
           "eye_color": "Brown",
@@ -1527,7 +1528,8 @@ export default {
         {
           "id": "45237428-93bf-4dd6-97ce-f10647300429",
           "name": "Prince Justin or Turnip Head",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d9/Prince_Justin.png",
+          /* "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d9/Prince_Justin.png", */
+          "img":"https://i.pinimg.com/originals/48/b8/3a/48b83a3ba3686c0ab001139b5d4ce4ab.jpg",
           "gender": "Male",
           "age": "20-30",
           "eye_color": "Grey",

@@ -1,5 +1,4 @@
 # Studio Ghibli
-
 Studio Ghibli é um estúdio japonês de animação, muito
 conhecido por seus filmes como **Meu Amigo Totoro**,
 **A Viagem de Chihiro**, **O Castelo Animado**, entre outros grandes sucessos.
