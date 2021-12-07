@@ -10,17 +10,16 @@ Studio Ghibli es una página web en la que puedes ver información acerca de las
 Nuestra página está dirigida a las personas que gustan de las películas de anime y les gustaría conocer más de las películas como quienes las dirigieron y quienes con los personajes.
 [![Whats-App-Image-2021-12-06-at-9-22-25-PM.jpg](https://i.postimg.cc/d3LxKfBz/Whats-App-Image-2021-12-06-at-9-22-25-PM.jpg)](https://postimg.cc/2LNwQ2gw)
 
+
+
 ## Diseño de la Interfaz de Usuario
+
 ### Prototipo de alta fidelidad
-
 [![Whats-App-Image-2021-12-06-at-8-46-14-PM.jpg](https://i.postimg.cc/W38Z8f6J/Whats-App-Image-2021-12-06-at-8-46-14-PM.jpg)](https://postimg.cc/MMcXK5LW)
-[![Whats-App-Image-2021-12-06-at-8-46-32-PM.jpg](https://i.postimg.cc/WbHMxCRG/Whats-App-Image-2021-12-06-at-8-46-32-PM.jpg)](https://postimg.cc/Xp9GC2Yq)
-[![Whats-App-Image-2021-12-06-at-8-47-23-PM.jpg](https://i.postimg.cc/CLLN3bRg/Whats-App-Image-2021-12-06-at-8-47-23-PM.jpg)](https://postimg.cc/K4wBLk7q)
 
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
+[![Whats-App-Image-2021-12-06-at-8-46-32-PM.jpg](https://i.postimg.cc/WbHMxCRG/Whats-App-Image-2021-12-06-at-8-46-32-PM.jpg)](https://postimg.cc/Xp9GC2Yq)
+
+[![Whats-App-Image-2021-12-06-at-8-47-23-PM.jpg](https://i.postimg.cc/CLLN3bRg/Whats-App-Image-2021-12-06-at-8-47-23-PM.jpg)](https://postimg.cc/K4wBLk7q)
 
 ### Prototipo de baja fidelidad
 [![prototipo-de-baja-fidelidad-Data-Lovers3.jpg](https://i.postimg.cc/SxHpPSNW/prototipo-de-baja-fidelidad-Data-Lovers3.jpg)](https://postimg.cc/gxy5XPhJ)
