@@ -303,8 +303,6 @@ a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
 ### Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
-![json. interfa]_(![image](https://user-images.githubusercontent.com/91803826/144944100-94799195-aa71-4802-8ecd-cad82bc36b5b.png)
-)
 Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_ ) de tu
 solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
 iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
