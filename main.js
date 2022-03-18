@@ -1,8 +1,8 @@
-import {ordenarEstreno} from './data.js';
-import {ordenarScore} from './data.js';
-import {ordenarProductores} from './data.js';
-import {ordenarDirectores} from './data.js';
-import {ordenarTitulos} from './data.js';
+import {ordenarEstreno} from './docs/data.js';
+import {ordenarScore} from './docs/data.js';
+import {ordenarProductores} from './docs/data.js';
+import {ordenarDirectores} from './docs/data.js';
+import {ordenarTitulos} from './docs/data.js';
 //console.log(example)
 import data from './data/ghibli/ghibli.js';/*libera nuestra data*/
 //console.log(data.films[0].people[0])
