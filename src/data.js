@@ -41,7 +41,7 @@ export const ordenarScore = (arrayData) => {
 
   arrayData.forEach(pelicula => {
       scoreDePelicula.push(pelicula.rt_score);
-   
+
   })
   //Array.from(new Set(productores));
   /*const uniqueSetScore = new Set(scoreDePelicula);

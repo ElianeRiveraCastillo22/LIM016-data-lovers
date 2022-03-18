@@ -30,11 +30,11 @@ function displayMenuItems(menuItems){
   /*   let template="" ; */
     menuItems.forEach((pelicula)=>
     {
-     // console.log(pelicula)   
+     // console.log(pelicula)
     const createElement=document.createElement("div")
     createElement.setAttribute("class",'cardPricipal');
     const template = `
-       
+
             <div class="card__Father">
                 <div class="cardLatter">
                     <div class="cardLatter__frond">
@@ -45,14 +45,14 @@ function displayMenuItems(menuItems){
                     <p>${pelicula.description}</p>
                     </div>
                 </div>
-            </div>      
+            </div>
    `;
 createElement.innerHTML=template;
 containerGeneral.appendChild(createElement)
 
  return template;
-}) 
-} 
+})
+}
 /* window.addEventListener('DOMContentLoaded',function(){
 displayMenuItems(infoData);
 //displayFilmsButtons();
@@ -151,38 +151,36 @@ function buscadorMostrarPelicula(menuItems){
 
 infoData.forEach(pelicula => {
     titulos.push(pelicula.title);
-        
+
 })
 titulos.sort();*/
 ordenarTitulos(infoData).forEach(titulo => {
     let opcion =  document.createElement('option');
     opcion.value = titulo;
     opcion.innerText = titulo;
-    selectTitle.appendChild(opcion); 
+    selectTitle.appendChild(opcion);
 })
 // Despliegue de pelicula
 
 selectTitle.addEventListener('change',function(){
     mostrarPelicula(infoData);
-    
+
 });
 
 function mostrarPelicula(menuItems){
     let template="";
      menuItems.forEach(pelicula=>{
     // console.log(pelicula)
-
         if(pelicula.title === selectTitle.value) {
-            template = 
-               
+            template =
         `
         <div class="box">
         <div  action="" id="botonPelicula" class="botonPelicula">
             <button id="mostrar-personajes" class="boton"><b class="escritoBtn">People</b></button>
             <button id="mostrar-vehiculos" class="boton"><b class="escritoBtn">Vehicles</b></button>
             <button id="mostrar-locacion" class="boton"><b class="escritoBtn">Locations</b></button>
-        </div>     
-        
+        </div>
+
         <div class="cardDescription__main">
             <div class="cardImg">
                 <img class="poster" src="${pelicula.poster}"
@@ -282,10 +280,6 @@ function mostrarPelicula(menuItems){
     cards.innerHTML= templatePersonajes;
            
 } 
-
-
-
-
 /*mostrarLocation.addEventListener('click',function(){
     mostrarLocacion(infoData);
     
@@ -323,10 +317,7 @@ function mostrarLocacion(menuItems){
                     </div>  
                     <div class="qualityOptionsLocations">
                         <p><b>surface_water:</b>${locacion.surface_water}</p>
-                    </div>
-    
-              
-                `
+                    </div>`
                 if("residents" in locacion) {
                     locacion.residents.forEach(residente => {
                         //console.log(typeof(residente))
@@ -335,15 +326,13 @@ function mostrarLocacion(menuItems){
                             templateLocations += `
                              <div class="qualityOptionsLocations"> 
                             <p><b>Residents:</b> ${residente.name}</p>
-                            </div>
-                            `
+                            </div>`
                             }
                         }else{
                             templateLocations += `
                             <div class="qualityOptionsLocations">
                             <p><b>Residents:</b> ${residente}</p>
-                            </div>
-                            `
+                            </div>`
                         }    
                     })   
                 }
@@ -352,14 +341,11 @@ function mostrarLocacion(menuItems){
                                     </div>
                                     ` 
     })
-    cards.innerHTML= templateLocations;           
+    cards.innerHTML= templateLocations;
 }
-
-
-             
 /*mostrarVehicles.addEventListener('click',function(){
     mostrarVehiculos(infoData);
-    
+
 });
 */
 function mostrarVehiculos(menuItems){
@@ -368,10 +354,10 @@ function mostrarVehiculos(menuItems){
     menuItems.forEach(movie => {
         if(movie.title === selectTitle.value) {
             vehiculos = movie.vehicles;
-        }    
-    })        
+        }
+    })
     vehiculos.forEach(vehiculo =>{
-        templateVehiculos += 
+        templateVehiculos +=
         `<article class="template-director">
             <div class="img-director">
                 <img src="${vehiculo.img}" alt="${vehiculo.img}">
@@ -387,13 +373,13 @@ function mostrarVehiculos(menuItems){
                     <p>Description: ${vehiculo.description}</p>
                 </div>
             </div>
-        </article>`   
-            
-    }) 
+        </article>`
+
+    })
         cards.innerHTML= templateVehiculos;
-       
-}            
-   
+
+}
+
 
 
 
@@ -409,7 +395,7 @@ function mostrarVehiculos(menuItems){
 
 infoData.forEach(pelicula => {
     directores.push(pelicula.director);
-    
+
 })
 
 //Array.from(new Set(directores));
@@ -420,14 +406,14 @@ ordenarDirectores(infoData).forEach(director => {
     let opcion =  document.createElement('option');
     opcion.value = director;
     opcion.innerText = director;
-    selectDirector.appendChild(opcion); 
+    selectDirector.appendChild(opcion);
 })
 
 // Despliegue de directores
 
 selectDirector.addEventListener('change',function(){
     mostrarDirector(infoData);
-    
+
 });
 
 function mostrarDirector(menuItems){
@@ -437,12 +423,12 @@ function mostrarDirector(menuItems){
         template +=
             `
         <div class="boxDirector">
-            <div class="cardDescriptionDirector__main"> 
+            <div class="cardDescriptionDirector__main">
                 <div class="cardImgDirector">
                     <img class="posterDirector" src="${pelicula.poster}",
                     alt="${pelicula.title}">
                 </div>
-        
+
                 <div class="cardDecriptionDirector__poster" >
                     <div class="cardTitleDirector">
                         <h1>${pelicula.title}</h1>
@@ -460,7 +446,7 @@ function mostrarDirector(menuItems){
             </div>
         </div>
             `;
-    }) 
+    })
     cards.innerHTML= template;
 
 }
@@ -471,7 +457,7 @@ function mostrarDirector(menuItems){
 
 infoData.forEach(pelicula => {
     productores.push(pelicula.producer);
-   
+
 })
 //Array.from(new Set(productores));
 const uniqueSetProductores = new Set(productores);
@@ -481,14 +467,13 @@ ordenarProductores(infoData).forEach(productor => {
     let opcion =  document.createElement('option');
     opcion.value = productor;
     opcion.innerText = productor;
-    selectProducer.appendChild(opcion); 
+    selectProducer.appendChild(opcion);
 })
 
 // Despliegue de productores
 
 selectProducer.addEventListener('change',function(){
     mostrarProductor(infoData);
-    
 });
 
 function mostrarProductor(menuItems){
@@ -496,13 +481,13 @@ function mostrarProductor(menuItems){
      menuItems.forEach(pelicula=>{
     // console.log(pelicula)
     if(pelicula.producer === selectProducer.value)
-    template += 
+    template +=
         `
 <div class="boxProducer">
-    <div class="cardDescriptionProducer__main"> 
+    <div class="cardDescriptionProducer__main">
         <div class="cardImgProducer">
             <img class="posterProducer" src="${pelicula.poster}",
-            alt="${pelicula.title}"> 
+            alt="${pelicula.title}">
         </div>
         <div class="cardDecriptionProducer__poster" >
             <div class="cardTitleProducer">
@@ -521,7 +506,7 @@ function mostrarProductor(menuItems){
     </div>
 </div>
         `;
-    }) 
+    })
     cards.innerHTML= template;
 
 }
@@ -532,7 +517,7 @@ function mostrarProductor(menuItems){
 
 infoData.forEach(pelicula => {
     scoreDePelicula.push(pelicula.rt_score);
-   
+
 })
 //Array.from(new Set(productores));
 const uniqueSetScore = new Set(scoreDePelicula);
@@ -549,7 +534,7 @@ ordenarScore(infoData).forEach(score => {
 
 inputScore.addEventListener('change',function(){
     mostrarScorePelicula(infoData);
-    
+
     });
 
 function mostrarScorePelicula(menuItems){
@@ -593,7 +578,7 @@ function mostrarScorePelicula(menuItems){
 
 infoData.forEach(pelicula => {
     estreno.push(pelicula.release_date);
-   
+
 })
 //Array.from(new Set(estreno));
 const uniqueSetEstreno = new Set(estreno);
@@ -603,7 +588,7 @@ ordenarEstreno(infoData).forEach(estreno => {
     let opcion =  document.createElement('option');
     opcion.value = estreno;
     opcion.innerText = estreno;
-    selectPremiere.appendChild(opcion); 
+    selectPremiere.appendChild(opcion);
 })
 
 
@@ -612,7 +597,7 @@ ordenarEstreno(infoData).forEach(estreno => {
 
 selectPremiere.addEventListener('change',function(){
     mostrarEstreno(infoData);
-    
+
 });
 
 function mostrarEstreno(menuItems){
@@ -620,13 +605,13 @@ function mostrarEstreno(menuItems){
      menuItems.forEach(pelicula=>{
     // console.log(pelicula)
     if(pelicula.release_date === selectPremiere.value)
-        template += 
+        template +=
         `
     <div class="boxYear">
-        <div class="cardDescriptionYear__main"> 
+        <div class="cardDescriptionYear__main">
             <div class="cardImgYear">
                 <img class="posterYear" src="${pelicula.poster}",
-                alt="${pelicula.title}"> 
+                alt="${pelicula.title}">
             </div>
             <div class="cardDecriptionYear__poster" >
                 <div class="cardTitleYear">
@@ -645,7 +630,7 @@ function mostrarEstreno(menuItems){
         </div>
     </div>
         `;
-    }) 
+    })
   cards.innerHTML= template;
 
 }

@@ -15,6 +15,7 @@ Nuestra página está dirigida a las personas que gustan de las películas de an
 ## Diseño de la Interfaz de Usuario
 
 ### Prototipo de alta fidelidad
+
 [![Whats-App-Image-2021-12-06-at-8-46-14-PM.jpg](https://i.postimg.cc/W38Z8f6J/Whats-App-Image-2021-12-06-at-8-46-14-PM.jpg)](https://postimg.cc/MMcXK5LW)
 
 [![Whats-App-Image-2021-12-06-at-8-46-32-PM.jpg](https://i.postimg.cc/WbHMxCRG/Whats-App-Image-2021-12-06-at-8-46-32-PM.jpg)](https://postimg.cc/Xp9GC2Yq)
