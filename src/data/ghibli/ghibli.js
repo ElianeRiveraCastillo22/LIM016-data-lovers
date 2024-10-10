@@ -34,7 +34,7 @@ export default {
         {
           "id": "3bc0b41e-3569-4d20-ae73-2da329bf0786",
           "name": "Dola",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b3/Dola.png",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Gib2qx5tOOZDl-9ah7WbqhzCH123Qjlpnub6CV-TUCX9IJziSZ6301kef5YXw6nX1kc&usqp=CAU",
           "gender": "Female",
           "age": "60",
           "eye_color": "Black",
@@ -1717,7 +1717,7 @@ export default {
       "description": "The son of a sailor, 5-year old Sosuke lives a quiet life on an oceanside cliff with his mother Lisa. One fateful day, he finds a beautiful goldfish trapped in a bottle on the beach and upon rescuing her, names her Ponyo. But she is no ordinary goldfish. The daughter of a masterful wizard and a sea goddess, Ponyo uses her father's magic to transform herself into a young girl and quickly falls in love with Sosuke, but the use of such powerful sorcery causes a dangerous imbalance in the world. As the moon steadily draws nearer to the earth and Ponyo's father sends the ocean's mighty waves to find his daughter, the two children embark on an adventure of a lifetime to save the world and fulfill Ponyo's dreams of becoming human.",
       "director": "Hayao Miyazaki",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/5/50/Ponyo_on_the_Cliff_by_the_Sea.jpg",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBdrPdJ85UrDmIby0pMRDzcDSI4Qnf4klLww&s",
       "release_date": "2008",
       "rt_score": "92",
       "people": [
@@ -1867,7 +1867,7 @@ export default {
       "description": "14-year-old Arrietty and the rest of the Clock family live in peaceful anonymity as they make their own home from items 'borrowed' from the house's human inhabitants. However, life changes for the Clocks when a human boy discovers Arrietty.",
       "director": "Hiromasa Yonebayashi",
       "producer": "Toshio Suzuki",
-      "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/4/46/The_Borrower_Arrietty.jpg",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbpTcktguWkyX41vqHx46Ru-Y2j4tH26M__Q&s",
       "release_date": "2010",
       "rt_score": "95",
       "people": [

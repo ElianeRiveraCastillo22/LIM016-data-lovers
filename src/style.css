@@ -1,796 +1,674 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
-*{
-    margin:  0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body{
-  
-    background-image: url(./img/fondo\ ghibli.jpg);
-    background-size: 100vw 100vh;
-   /*  background-repeat: no-repeat; */
-  }
-  .header{
-    /* margin-bottom: 60px; */
-    width: 100%;
-    height: 100px;
-    background: #18191F;
-     /*  position:fixed;
-    top: 0;
-    left: 0;   */
-  }
-  .capa{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: rgb(248 248 248 / 49%);
-    z-index: -1;
-    top: 0;
-    left: 0;
-  }
-   .head{
-    height: 100%;
-    width: 95%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    /* flex-grow: 2; */
-   }
-   .apareceInf{
-   /*  position: fixed; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-   }
-   .btn_menu {
-    max-width: 50px; 
-    display: flex;
-    height: 100%;
-    width: 8%;
-    justify-content: center;
-    align-content: center;
-     
-  }
-  .logo-head {
-    display: flex;
-    height: 100%;
-    width: 92%;
-    justify-content: center;
-    align-items: center;
-  }
-  .icon-menu {
-    height: 100%;
-    display: flex;
-    color: white;
-    justify-items: center;
-    justify-content: center;
-    width: 100%;
-    align-content: center;
-    align-items: center;
-      font-size: 25px;
-      cursor: pointer;
-  }
-   .logo-header{
-    height: 70px;
-    width: 300px;
-  }
-  /*menu lateral*/
-  #btn-menu{
-    display: none;
-  }
-  .container-menu{
-    position: absolute;
-    top:0;
-    left: 0;
-    background: rgba(0,0,0,0.5);
-    height:100vh ;
-    width:100% ;
-    transition: all 500ms ease;
-    opacity: 0;
-      visibility: hidden;
-    z-index:1;
-  }
-    #btn-menu:checked ~ .container-menu{
-    opacity: 1; 
-    visibility: visible;
-}
-  .cont-menu{
-    width: 100%;
-    max-width:315px ;
-    background: #1c1c1c;
-    height: 100vh;
-    position: relative;
-     transition: all 500ms ease;
-     transform: translateX(-100%);
-     z-index:1;
-     font-family: 'Montserrat Alternates', sans-serif;
-  }
-  #btn-menu:checked ~ .container-menu .cont-menu{
-          transform: translateX(0%);
-      }
-  .cont-menu nav{
-          transform: translateY(15%);
-  }
-  .cont-menu nav a{
-          display: block;
-          text-decoration: none;
-          padding: 30px;
-          color: #c7c7c7;
-          border-left: 5px solid transparent;
-          transition: all 400ms ease;
-  }
-  .cont-menu nav a:hover{
-          border-left: 5px solid #c7c7c7;
-          background: #1f1f1f;
-      }
-  .cont-menu label{
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor: pointer;
-    color: white;
-    font-size: 25px;
-  
-  }
-  .buscador{
-  display: flex;
-  
-  }
-  
-  .container__general{
-    height:100%;
+:root {
+	--color-primario: #18191F;
+	--borders-btn: #F39F9F;
+	--bg-btn: #FDD9D9;
+	--color-secundario: #f0f0f0;
+	--bg--card: #A8CEF5;
+	--bg--hover: #1f1f1f;
+	--line--hover: #c7c7c7;
 
-  }
-  
-  .footer{
-    margin-top: 60px;
+	/*Tipografia*/
+	--type-main: "Montserrat", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+	max-width: 100%;
+	width: 100%;
+	display: block;
+	object-fit: cover;
+	object-position: center center;
+}
+
+a {
+	display: block;
+}
+
+p a {
+	display: inline;
+}
+
+li {
+	list-style-type: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+em {
+	font-size: 1em;
+	font-weight: inherit;
+	font-style: inherit;
+	text-decoration: none;
+	color: inherit;
+}
+
+::selection {
+	background-color: var(--color-primario);
+	color: var(--color-secundario);
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+	font-family: inherit;
+	font: inherit;
+	font-size: inherit;
+	hyphens: auto;
+	background-color: transparent;
+	display: block;
+	color: inherit;
+}
+
+svg {
+	width: 100%;
+	display: block;
+	fill: currentColor;
+}
+
+body {
+	min-height: 100dvb;
+	font-size: 100%;
+	font-family: var(--tipo-principal);
+	background-image: url(./img/background-ghibli.jpg);
+	font-optical-sizing: auto;
+	font-style: normal;
+	background-size: cover;
+}
+
+.header {
+	background: #18191F;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 1;
+}
+
+.header__containerLogo {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header__logo {
+	max-width: 25rem;
+}
+
+.header__containerBtnHamburger {
+	position: absolute;
+	height: 100%;
+	padding: 0px 0px 0px 6%;
+}
+
+.header__iconHamburger {
+	display: flex;
+	height: 100%;
+	color: white;
+	width: 100%;
+	font-size: clamp(3rem, 2.643rem + 0.952vw, 3.5rem);
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+}
+
+#btn-menu {
+	display: none;
+}
+
+#btn-menu:checked~.sideMenuContainer--bg {
+	opacity: 1;
+	visibility: visible;
+}
+
+#btn-menu:checked~.sideMenuContainer--bg .sideMenuContainer {
+	transform: translateX(0%);
+}
+
+.sideMenuContainer__navMenu.navMenu {
+	padding-top: 56px;
+}
+
+.sideMenuContainer--bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	height: 100vh;
+	width: 100%;
+	transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1;
+}
+
+.sideMenuContainer {
+	background: #1c1c1c;
+	height: 100vh;
+	transition: all 500ms ease;
+	transform: translateX(-100%);
+	padding: 6%;
+}
+
+.sideMenuContainer__iconClose {
+	font-size: 5rem;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	cursor: pointer;
+}
+
+.navMenu__filters {
+	padding: 30px;
+	color: #c7c7c7;
+	border-left: 5px solid transparent;
+	transition: all 400ms ease;
+}
+
+.navMenu__filters select,
+.navMenu__filters input {
+	font-size: 3rem;
+	/* background: white; */
+	padding: 36px 32px;
+	border-radius: 32px;
+	font-family: var(--type-main);
+
+}
+
+.navMenu__filters .inputBuscador {
+	outline: 1px solid white;
+}
+
+.navMenu__filters select {
+	width: 100%;
+	appearance: none
+}
+
+.navMenu__filters select:focus {
+	border-color: none;
+	outline: 0;
+}
+
+.navMenu__filters select::after {
+	content: "😁";
+	display: table-cell;
+	text-align: center;
+	padding-top: 7px;
+	width: 30px;
+	height: 30px;
+	background-color: #d9d9d9;
+	position: absolute;
+	top: 0;
+	right: 0px;
+	pointer-events: none;
+}
+
+.filter__search {
+	display: grid;
+	flex-direction: row;
+	height: auto;
+	grid-template-columns: 60% 40%;
+	grid-template-rows: 1fr;
+	justify-content: space-evenly;
+}
+
+.filter__searchBtn {
+	font-size: 3rem;
+	border: solid #F39F9F;
+	transition: background-color .5s;
+	cursor: pointer;
+	background: #FDD9D9;
+	padding: 36px 32px;
+	border-radius: 32px;
+	font-family: var(--type-main);
+	color: white;
+	margin: 0 0 0 32px;
+}
+
+.filter__searchBtn:hover {
+	background-color: #F39F9F;
+}
+
+.filters__conatinerScore {
+	display: grid;
+	flex-direction: row;
+	height: auto;
+	grid-template-columns: 40% 60%;
+	grid-template-rows: 1fr;
+	justify-content: space-evenly;
+}
+
+.filters__conatinerScore label {
+	padding: 36px 32px;
+	font-size: 3rem;
+	border-radius: 32px;
+	font-family: var(--type-main);
+}
+
+.filters__conatinerScore .inputRangeScore {
+	width: 100%;
+}
+
+main {
+	position: absolute;
+	padding: 6%;
+	width: 100%;
+}
+
+.allCards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+
+}
+
+.allCards__card {
+	position: relative;
+}
+
+.allCards__card--info {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    height: 100px;
-    background: #18191F;
-  }
-  .diplayBuscador{
+    padding: 32px;
     display: flex;
-  }
-  .option{
-    font-size: 12px;
-    font-family: 'Poppins', sans-serif;
-    border-radius: 8px;
-    height: 35px;
-  }
-  .inputBuscador{
-    width: 176px;
-    font-family: 'Poppins', sans-serif;
-    border-radius: 8px;
-    height: 35px;
-    margin: 10px 0px;
-  }
-  .buttonBuscador{
-    font-size: 15px;
-    font-family: 'Poppins', sans-serif;
-    border-radius: 8px;
+    justify-content: space-between;
+    cursor: pointer;
+    background: rgb(24 25 31 / 70%);
+    font-weight: 800;
+    text-align: left;
+    color: #f39f9f;
+    align-items: center;
+}
+
+.allCards__card--info img {
+	width: 36px;
+}
+
+.allCards__card--info p {
+	font-size: 1rem;
+	transition: background-color .5s;
+	cursor: pointer;
+	font-family: var(--type-main);
+	color: white;
+	max-width: 60%;
+}
+
+.allCards__card--info:hover p {
+	transform: scale(1.05);
+}
+
+.allCards__card--img {
+	min-height: 620px;
+}
+
+.boxDirector {
+	margin: 30px;
+	border: solid;
+	height: 100%;
+}
+
+.cardInfo {
+	font-family: var(--type-main);
+	margin-bottom: 68%;
+	display: flex;
+	position: relative;
+
+}
+
+.cardInfo__containerInfo {
+	font-size: 2rem;
+	background: white;
+	padding: 4rem;
+	position: absolute;
+	bottom: -40%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+	border-left: solid 8px #18191f;
+	border-right: solid 8px #18191f;
+	border-bottom: solid 8px #18191f;
+	border-radius: 0px 0px 32px 32px;
+}
+
+.cardInfo__containerInfo--title {
+    font-size: 3rem;
+    top: -40px;
+    font-weight: 900;
+}
+
+.cardInfo__img {
+	border: solid 8px #18191F;
+}
+
+.cardInfo__img,
+.cardInfo__containerImg,
+.cardInfo {
+	border-radius: 2rem;
+}
+.cardInfo__containerInfo> p{
+
+}
+.containerInfo__extra {
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px
+}
+
+.cardSpecsDirector b {
+	margin-right: 2rem;
+}
+
+.cardContainer__btnContainer {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	row-gap: 1rem;
+	cursor: pointer;
+	margin-bottom: 4rem;
+
+}
+
+.cardContainer__btn {
     border: solid #F39F9F;
-    transition:  background-color .5s;
-    height: 35px;
-    margin: 10px;
-    width: 80px;
+    transition: background-color .5s;
     cursor: pointer;
     background: #FDD9D9;
-  }
-  .buttonBuscador:hover{
-    background-color:#F39F9F;
-  }
-  .score{
-    font-size:20px ;
-    margin: 10px 0px;
-  }
-  .inputRangeScore{
-    width: 245px;
-  }
-
-
- /*  template card general */
-
- .container__general{
-    height: 100%;
-    max-width: 1200px;
-    margin: 50px auto;
-    display: flex;
-    padding: 20px;
-    padding-bottom: 40px;
-      /* margin: auto; */
-    margin-top: 60px;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    justify-content: center;
-  }   
-  
-  .card__Father{
-    margin: 10px;
-    perspective: 800;
-    -webkit-perspective: 800;
-  }
-  
-  .cardLatter{
-    
-      width: 200px ;
-      height: 285px;
-      background: #F29720;
-  /*  border: solid; */
-   position: relative;
-   transform-style: preserve-3d;
-       transition: .7s ease;
-         -webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
-      box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
-  
-   }
-   .cardLatter__frond,
-   .cardLastter__back{
-     width:100% ;
-     height: 100%;
-     position: absolute;
-     left:0;
-     top: 0;
-    -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-   }
-   .cardLastter__back{
-     transform: rotateY(180deg);
-     display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-content: center;
-     align-items: center;
-      color: #474747;
-      background: #EFF3F5;
-      padding: 20px;
-      font-size: 10px;
-      
-      
-   }
-   .card__Father:hover .cardLatter{
-      transform: rotateY(180deg);
-  
-   }
-   
-
-.box{
-    margin: 20px;
-   height: 100%;
-   width: 100%;
-   
-   border: solid white; 
-   padding: 20px;
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   font-family: 'Montserrat Alternates', sans-serif;
+    padding: 2.25rem 2rem;
+    border-radius: 2rem;
+    font-family: var(--type-main);
+    color: white;
+    font-size: 2rem;
 }
 
-
-/*botones de la carta por busqueda*/
-.botonPelicula{
-  height: 50px;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-}
-.boton{
- font-family: 'Montserrat Alternates', sans-serif;
-    margin: 5px;
-    width: 30%;
-   /*   display: flex;  */
-    justify-content: center;
-    justify-items: center;
-    flex-direction: row;
-    border-radius: 10px;
-    border: solid #F39F9F;
-    background-color: #FDD9D9;
-    cursor: pointer;
-    transition:  background-color .5s;
-}
-.boton:hover{
-  background-color:#F39F9F ;
-
-}
-
-.escritoBtn{
-  font-size: 20px;
-}
-
-
-/*carta principal de la busqueda por nombre*/
-.prueba{
-  height: 100%;
-  width: 100%;
-}
-.cardDescription__main{
-    margin: 20px;
-    font-family: 'Montserrat Alternates', sans-serif;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-  /*   margin: 50px; */
-    padding: 20px;
-    background: #A8CEF5;
-    height: 100%;
-    flex-wrap: wrap;
-    border-radius: 10px;
-}
-
-
-.cardDecription__poster{
-    height: 100%;
-    margin: 10px;
-    width: 90%;
-    font-size: 14px;
-    max-width: 400px;
-    
-    background: white;
-    padding: 15px;
-}
-
-.cardTitle{
-  text-align: center;
-  padding: 10px;
-}
-
-.cardDescription{
-      padding: 10px;
-}
-
-.cardSpecs{
-  padding: 10px;
-}
-.poster{
-  justify-content: center;
-  
-}
-
-.cardImg{  
-  margin: 10px;
-}
-/*card locations*/
-.containerLocations{
-  max-width: 1200px;
-  padding: 20px;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-.locationsImg{
- 
-  position: relative;
-  /* z-index: 1; */
-  transition: all 400ms cubic-bezier(0.5,0,0,1);
-  border-radius: 20px;
-}
-.imgLocations{
-  position: relative;
-height:150px ;
-width:250px;
-}
-.cardLocations{
-  /* background: #EFF3F5;
-  border: solid; */
-  width: 208px;
-  position: relative;
-  margin: 20px;
-  font-family: 'Poppins', sans-serif;
-  transition: all 300ms;
-  border-radius: 20px;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.cardLocations:hover{
-
-   box-shadow: 1px 1px 20px -10px #20202049;
-}
-.cardLocations:hover .infoDescription__locations{
-  margin-top: 0;
-  border-radius: 0px 0px 20px 20px;
-
-}
-
-.infoDescription__locations{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  height: 120px;
-  width: 250px;
-  margin-top: -125px;
-  color: #474747;
-  background: #EFF3F5;
-  padding: 15px;
-  transition: all 400ms cubic-bezier(0.5,0,0,1);
-  border-radius: 20px;
-}
-
-.imgLocations:hover {
-border: solid cadetblue 6px
-}
-
-.titleLocations {
-  
-  background: azure;
-  border-radius: 6px;
-  border: dotted;
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-}
-
-/*cards people*/
-
-.containerPeople{
-  max-width: 1200px;
-  padding: 20px;
-  /* padding-bottom: 40px; */
-  margin: auto;
-  /* margin-top: 60px; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.peopleImg{
-  height: 280px;
-  width: 200px;
- /*  position: relative; */
-  z-index: 1;
-  transition: all 400ms cubic-bezier(0.5,0,0,1);
-  border-radius: 20px;
+.cardContainer__btn:hover {
+	background-color: #F39F9F;
 }
 
-.cardPeople{
-  /* background: #EFF3F5;
-  border: solid; */
-  width: 208px;
-  position: relative;
-  margin: 20px;
-  font-family: 'Poppins', sans-serif;
-  transition: all 300ms;
-  border-radius: 20px;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.cardPeople__img {
+    height: 300px;
 
 }
-.cardPeople:hover{
 
-   box-shadow: 1px 1px 20px -10px #20202049;
+.cardPeople__containerCardPeople {
+	border: solid 8px #18191F;
+  border-radius: 2rem 2rem 0rem 0rem;
 }
-.cardPeople:hover .infoDescription__people{
-  margin-top: 0;
-  border-radius: 0px 0px 20px 20px;
 
+.cardPeople__containerCardPeople img {
+	border-radius: 2rem 2rem 0rem 0rem;
 }
 
-.infoDescription__people{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  width: 200px;
-  height:100%;
-  color: #474747;
-  background: #EFF3F5;
-  padding: 20px;
-  margin-top: -240px;
-  transition: all 400ms cubic-bezier(0.5,0,0,1);
-  border-radius: 20px;
+.cardPeople__containerInfo {
+	width: 100%;
+	font-size: 2rem;
+	background: white;
+	padding: 4rem;
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+	border-left: solid 8px #18191f;
+	border-right: solid 8px #18191f;
+	border-bottom: solid 8px #18191f;
+	border-radius: 0px 0px 32px 32px;
+font-family: var(--type-main);
 }
 
-img.imgPeople {
-  position: relative;
-  border: solid white 4px;
-  height: 280px;
-  width: 200px;
+h2.cardPeople__title {
+	font-size: 3rem;
+	font-weight: 900;
+	overflow: hidden;
 }
-.imgPeople:hover {
-border: solid cadetblue 6px
-}
-.title {
-  font-size: 10px;
-  height: 50px;
-  width: 200px;
-  margin: 10px 0px;
-  background: #F39F9F;
-  border-radius: 6px;
-  border: solid 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-}
 
-
-/*carta principal de la busqueda por Director*/
-
-.cardDescriptionDirector__main{
-  margin: 20px;
-  font-family: 'Montserrat Alternates', sans-serif;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-/*   margin: 50px; */
-  padding: 20px;
-  background: #A8CEF5;
-  height: 100%;
-  flex-wrap: wrap;
-  border-radius: 10px;
+.cardPeople__info {
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
 }
 
-.boxDirector{
-margin: 30px;
-border: solid;
-height: 100%;
-font-family: 'Montserrat Alternates', sans-serif;
+.cardPeople__info b {
+	margin-right: 1rem;
 }
 
-.cardDecriptionDirector__poster{
-  height: 100%;
-  margin: 10px;
-  width: 90%;
-  font-size: 14px;
-  max-width: 400px;
-  
-  background: white;
-  padding: 15px;
+.notFoundSection {
+	font-size: 4em;
+	padding: 6%;
+	border-radius: 32px;
+	font-weight: 900;
+	color: white;
+	font-family: var(--type-main);
+	text-align: center;
 }
-
-.cardTitleDirector{
-text-align: center;
-padding: 10px;
+.containerCard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 2rem;
 }
 
-.cardDescriptionDirector{
-    padding: 10px;
-}
 
-.cardSpecsDirector{
-padding: 10px;
-}
-.posterDirector{
-justify-content: center;
 
-}
 
-.cardImgDirector{  
-margin: 10px;
-}
 
 
 
-/*carta principal de la busqueda por Productor*/
-
-.cardDescriptionProducer__main{
-  margin: 20px;
-  font-family: 'Montserrat Alternates', sans-serif;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-/*   margin: 50px; */
-  padding: 20px;
-  background: #A8CEF5;
-  height: 100%;
-  flex-wrap: wrap;
-  border-radius: 10px;
-}
 
-.boxProducer{
-  height: 100%;
-  border: solid;
-  margin: 20px;
-  font-family: 'Montserrat Alternates', sans-serif;
-}
 
-.cardDecriptionProducer__poster{
-  /* height: 100%; */
-  margin: 10px;
-  width: 90%;
-  font-size: 14px;
-  max-width: 400px;
-  
-  background: white;
-  padding: 15px;
-}
 
-.cardTitleProducer{
-text-align: center;
-padding: 10px;
-}
 
-.cardDescriptionProducer{
-    padding: 10px;
-}
 
-.cardSpecsProducer{
-padding: 10px;
-}
-.posterProducer{
-justify-content: center;
 
-}
 
-.cardImgProducer{  
-margin: 10px;
-}
 
 
 
-/*carta principal de la busqueda por Score*/
-
-.cardDescriptionScore__main{
-  margin: 20px;
-  font-family: 'Montserrat Alternates', sans-serif;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-/*   margin: 50px; */
-  padding: 20px;
-  background: #A8CEF5;
-  height: 100%;
-  flex-wrap: wrap;
-  border-radius: 10px;
-}
 
-.boxScore{
-  height: 100%;
-  border: solid;
-  margin: 20px;
-  font-family: 'Montserrat Alternates', sans-serif;
-}
 
-.cardDecriptionScore__poster{
-  height: 100%;
-  margin: 10px;
-  width: 90%;
-  font-size: 14px;
-  max-width: 400px;
-  
-  background: white;
-  padding: 15px;
-}
 
-.cardTitleScore{
-text-align: center;
-padding: 10px;
-}
 
-.cardDescriptionScore{
-    padding: 10px;
-}
 
-.cardSpecsScore{
-padding: 10px;
-}
-.posterScore{
-justify-content: center;
 
-}
 
-.cardImgScore{  
-margin: 10px;
-}
 
 
 
-/*carta principal de la busqueda por Year*/
-
-.cardDescriptionYear__main{
-  margin: 20px;
-  font-family: 'Montserrat Alternates', sans-serif;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-/*   margin: 50px; */
-  padding: 20px;
-  background: #A8CEF5;
-  height: 100%;
-  flex-wrap: wrap;
-  border-radius: 10px;
-}
 
-.boxYear{
-height: 100%;
-border: solid;
-margin: 20px;
-font-family: 'Montserrat Alternates', sans-serif;
-}
 
-.cardDecriptionYear__poster{
-  height: 100%;
-  margin: 10px;
-  width: 90%;
-  font-size: 14px;
-  max-width: 400px;
-  
-  background: white;
-  padding: 15px;
-}
 
-.cardTitleYear{
-text-align: center;
-padding: 10px;
-}
 
-.cardDescriptionYear{
-    padding: 10px;
-}
 
-.cardSpecsYear{
-padding: 10px;
-}
-.posterYear{
-justify-content: center;
 
-}
 
-.cardImgYear{  
-margin: 10px;
-}
 
 
-/*carta principal de la busqueda porSeeker*/
-
-.cardDescriptionSeeker__main{
-  margin: 20px;
-  font-family: 'Montserrat Alternates', sans-serif;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-/*   margin: 50px; */
-  padding: 20px;
-  background: #A8CEF5;
-  height: 100%;
-  flex-wrap: wrap;
-  border-radius: 10px;
-}
 
-.boxSeeker{
-height: 100%;
-border: solid;
-margin: 20px;
-font-family: 'Montserrat Alternates', sans-serif;
-}
 
-.cardDecriptionSeeker__poster{
-  height: 100%;
-  margin: 10px;
-  width: 90%;
-  font-size: 14px;
-  max-width: 400px;
-  
-  background: white;
-  padding: 15px;
-}
 
-.cardTitleSeeker{
-text-align: center;
-padding: 10px;
-}
 
-.cardDescriptionSeeker{
-    padding: 10px;
-}
 
-.cardSpecsSeeker{
-padding: 10px;
-}
-.posterSeeker{
-justify-content: center;
 
-}
 
-.cardImgSeeker{  
-margin: 10px;
-}
+@media (width >=320px) {}
+
+@media (width >=375px) {}
+
+@media (width >=425px) {
+
+}
+
+@media (width >=768px) {
+
+}
+
+/*laptop*/
+@media (width >=64rem) and (height <=62.5rem) {
+    .header__logo {
+        max-width: 19rem;
+    }
+    .navMenu__filters select, .navMenu__filters input {
+        font-size: 2rem;
+    }
+    .navMenu__filters select, .navMenu__filters input {
+        font-size: 1.5rem;
+    }
+    .filters__conatinerScore label {
+        padding: 0px 32px;
+        font-size: 1.5rem;
+    }
+    .filter__searchBtn {
+        font-size: 1.5rem;
+        padding: 1.125rem 2rem;
+        border-radius: 32px;
+    }
+    .header__containerBtnHamburger {
+        padding: 0px 0px 0px 4%;
+    }
+    main {
+        padding: 4%;
+    }
+    .header__logo {
+        max-width: 13.75rem;
+    }
+    .cardInfo {
+        display: grid;
+        flex-direction: row;
+        grid-template-columns: 1fr 1.5fr;
+        max-width: 1000px;
+        margin: auto;
+    }
+    .cardContainer__btnContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin-bottom: 1rem;
+        column-gap: 1rem;
+    }
+    .cardInfo__containerInfo {
+        position: initial;
+        border-top: solid 8px #18191f;
+        border-radius: 0px 0px 32px 0px;
+    }
+    .allCards {
+        grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
+    }
+    .allCards__card--img {
+        min-height: 360px;
+    }
+    .cardContainer__btn {
+        font-size: 1.5rem;
+        padding: 1rem 2rem;
+    }
+    .cardInfo__containerInfo--title {
+        font-size: 2rem;
+    }
+    .cardInfo__containerInfo> p {
+        font-size: 1.25rem;
+    }
+    .containerInfo__extra {
+        font-size: 1.25rem;
+    }
+    .cardSpecsDirector b {
+        margin-right: 1rem;
+    }
+    .cardInfo__img {
+        border-left: solid 8px #18191F;
+        border-right: solid 0px #18191F;
+        border-top: solid 8px #18191F;
+        border-bottom: solid 8px #18191F;
+        border-radius: 2rem 0rem 0rem 2rem;
+        height: 100%;
+    }
+    .cardContainer {
+        display: flex;
+        flex-direction: column;
+        max-width: 980px;
+        margin: auto;
+    }
+    .sideMenuContainer {
+        width: 50%;
+        padding: 2%;
+    }
+    .navMenu__filters select, .navMenu__filters input {
+        padding: 0px 32px;
+    }
+    .sideMenuContainer__iconClose {
+        font-size: 2rem;
+    }
+    .sideMenuContainer__navMenu.navMenu {
+        padding-top: 0px;
+    }
+    .containerCard {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+        max-width: 980px;
+        margin: auto;
+        width: 100%;
+    }
+    h2.cardPeople__title {
+        font-size: 2rem;
+    }
+    .cardPeople__info p{
+        font-size: 1.5rem;
+    }
+}
+
+/*tableta*/
+@media (width >=64rem) and (height > 62.5rem) {
+    .header__logo {
+        max-width: 19rem;
+    }
+    .navMenu__filters select, .navMenu__filters input {
+        font-size: 2rem;
+    }
+    .navMenu__filters select, .navMenu__filters input {
+        font-size: 1.5rem;
+    }
+    .filters__conatinerScore label {
+        padding: 0px 32px;
+        font-size: 1.5rem;
+    }
+    .filter__searchBtn {
+        font-size: 1.5rem;
+        padding: 1.125rem 2rem;
+        border-radius: 32px;
+    }
+}
+
+@media (width >=1440px) {}
+
+@media (width >=2560px) {}

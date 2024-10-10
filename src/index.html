@@ -1,102 +1,113 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel = "preconnect" href = "https://fonts.googleapis.com">
-    
-    <script src="https://kit.fontawesome.com/7301e79ad4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/7301e79ad4.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
-    <header class="header" > 
-      <div class="head"><!--container-->
-        <div class="btn-menu">
-          <label class="icon-menu" for="btn-menu">☰</label>
+    <header class="header">
+        <!--container-->
+        <div class="header__containerBtnHamburger">
+          <label class="header__iconHamburger" for="btn-menu">☰</label>
         </div>
-        <div class="logo-head">
-          <img  class="logo-header" src= "./img/encabezadoGhibli.png">
-        </div>
-      </div>
-     <div class="capa"></div>
+        <figure class="header__containerLogo">
+          <a href="/">
+            <img class="header__logo" src="img/logo.png" />
+          </a>
+
+        </figure>
     </header>
-    <!--menu side-->
-    <input type="checkbox" id="btn-menu">
-    <div class="container-menu">
-      <div class="cont-menu">
-        <nav>
-          <a href="#" class="closeOption">
-            <div class="diplayBuscador">
-              <div class="EncierraInputBuscador">
-                <input type="text" name="buscador" class="inputBuscador" id="buscador">
-              </div>
-              <div class="encierraButtonBuscador">
-                <button class="buttonBuscador" id="boton">Buscar</button>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="closeOption">
-            <select  class="option" name="Nombre de pelicula" data-id="select-title" id="select-title">
-              <option disabled selected >Nombre de pelicula</option>
+    <input type="checkbox" id="btn-menu" />
+    <div class="sideMenuContainer--bg">
+      <aside class="sideMenuContainer">
+        <label for="btn-menu" class="sideMenuContainer__iconClose">✖️</label>
+        <ul class="sideMenuContainer__navMenu navMenu">
+          <li class="navMenu__filters filter__search">
+            <input
+                type="text"
+                name="buscador"
+                class="inputBuscador"
+                id="buscador"
+                placeholder="Nombre de la pelicula"
+            />
+            <button class=" filter__searchBtn" id="boton">Buscar</button>
+          </li>
+          <li class="navMenu__filters">
+            <select
+              class="option"
+              name="Nombre de pelicula"
+              data-id="select-title"
+              id="select-title"
+            >
+              <option disabled selected>Nombre de pelicula</option>
             </select>
-          </a>
-          <a href="#" class="closeOption">
-            <select class="option" name="Productor" data-id="select-producer" id="select-producer">
-              <option disabled selected >Productor</option>
+          </li>
+          <li class="navMenu__filters">
+            <select
+              class="option"
+              name="Productor"
+              data-id="select-producer"
+              id="select-producer"
+            >
+              <option disabled selected>Productor</option>
             </select>
-          </a>
-          <a href="#" class="closeOption">
-            <select class="option" name="Director" data-id="select-director" id="select-director">
-              <option disabled selected >Director</option>
+          </li>
+          <li class="navMenu__filters">
+            <select
+              class="option"
+              name="Director"
+              data-id="select-director"
+              id="select-director"
+            >
+              <option disabled selected>Director</option>
             </select>
-          </a>
-          <a href="#" class="closeOption">
-            <select  class="option" name="Estreno" data-id="select-premiere" id="select-premiere">
-              <option disabled selected >Estreno</option>
+          </li>
+          <li class="navMenu__filters">
+            <select
+              class="option"
+              name="Estreno"
+              data-id="select-premiere"
+              id="select-premiere"
+            >
+              <option disabled selected>Estreno</option>
             </select>
-          </a>
-          <a href="#" class="closeOption">
-            <div class="score">Score</div>
-            <label for="select-score"></label> 
-            <input class="inputRangeScore" type="range"  id="input-score" name="score" min="89" max="100" list="lista-rango"> 
-          </a>
-        </nav>
-        <label for="btn-menu">✖️</label>
-      </div>
+          </li>
+          <li class="navMenu__filters filters__conatinerScore">
+            <!-- <div class="score">Score</div> -->
+            <label for="select-score">Score</label>
+            <input
+              class="inputRangeScore"
+              type="range"
+              id="input-score"
+              name="score"
+              min="89"
+              max="100"
+              list="lista-rango"
+            />
+          </li>
+        </ul>
+
+      </aside>
     </div>
+
     <main>
-      
-      <div id="apareceInf" class="apareceInf">
-        
-        <div class="container__general" >
-        </div>
-        
-   
-      </div> 
 
     </main>
 
-      <div id="root"></div><!--done va la inf-->
-      
-    <footer class="footer">
-      <div class="pieDePagina">
-      </div>
-    </footer> 
 
-
-      <script src="main.js" type="module"></script>
-    
+    <script src="main.js" type="module"></script>
   </body>
- 
-
 </html>
